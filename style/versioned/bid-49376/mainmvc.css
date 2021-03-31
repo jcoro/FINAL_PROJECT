@@ -16617,7 +16617,7 @@ button.BrowseSidebar-headerCollapse:hover {
 }
 
 .AllEditionsItem-tileTitle {
-    font-size: 13px
+    font-size: 18px;
 }
 
 .AllEditionsItem-photo {
@@ -30535,4 +30535,11 @@ button.LandingPage-responsiveTitle:hover {
 
 .Recipe-default .text-gray {
     color: #707070
+}
+
+div span.customHeader a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #008575;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
 }

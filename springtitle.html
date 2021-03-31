@@ -15,6 +15,16 @@
   <meta name="distribution" content="Global"/>
   
   <link rel="icon" href="https://static.thriftbooks.com/images/favicon.ico" type="image/x-icon"/>
+  
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"></script>
+  
   <link rel="stylesheet" href="style/versioned/bid-49376/works.css">
   
   <meta name="description"
@@ -32,7 +42,6 @@
     <div>
       <a href="#TBContent" class="SkipToContent" title="Skip to content" tabindex="0">Skip to content</a>
       <div class="SuperHeader" id="SuperHeader"></div>
-      
       <div class="DesktopHeader Content">
         <div class="DesktopHeader-left">
           <a class="DesktopHeader-logoLink" href="index.html">
@@ -48,23 +57,22 @@
                      placeholder="Search 13 million titles by title, author, or ISBN"
                      aria-label="Search 13 million titles by title, author, or ISBN">
               <div class="Button-container Search-submit is-flat">
-                <button type="button" class="Button" onclick="getInputValue();">
+                <button type="button" class="Button" onclick="checkSubmit(e);">
                   <svg class="Icon" aria-hidden="true">
                     <svg id="Icon--search" class="IconSymbol" viewBox="0 0 24 23.5">
                       <path
-                        d="M23.3 19.5L18.9 15c.8-1.5 1.3-3.2 1.3-5 0-5.5-4.5-10-10.1-10S0 4.5 0 10.1s4.5 10.1 10.1 10.1c2.1 0 4-.6 5.6-1.7l4.3 4.3c.5.5 1.1.7 1.6.7.6 0 1.2-.2 1.6-.7 1-.9 1-2.4.1-3.3zM3.1 10.1c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.2-7-7z"></path>
+                        d="M23.3 19.5L18.9 15c.8-1.5 1.3-3.2 1.3-5 0-5.5-4.5-10-10.1-10S0 4.5 0 10.1s4.5 10.1
+                        10.1 10.1c2.1 0 4-.6 5.6-1.7l4.3 4.3c.5.5 1.1.7 1.6.7.6 0 1.2-.2 1.6-.7 1-.9
+                        1-2.4.1-3.3zM3.1 10.1c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.2-7-7z">
+                      </path>
                     </svg>
                   </svg>
-                
                 </button>
               </div>
             </div>
           </div>
         </div>
-        
         <div class="DesktopHeader-right">
-          
-          
           <div id="UserComponent">
             <div>
               <div class="UserComponent-container" tabindex="0">
@@ -72,7 +80,7 @@
                   <div class="UserComponent-greeting"><span class="bold">Hi Reader!</span>
                     <div class="UserComponent-login">Log In</div>
                   </div>
-                  <svg icon="chevron-down" class="Icon UserComponent-chevron" aria-hidden="true">
+                  <svg class="Icon UserComponent-chevron" aria-hidden="true">
                     <use data-classes="UserComponent-chevron" xlink:href="#Icon--chevron-down">
                       <svg id="Icon--chevron-down" class="IconSymbol" viewBox="970 -347 24 15.4">
                         <path
@@ -87,21 +95,21 @@
           
           <div class="Header-verticalBar"></div>
           
-          <a class="Header-button Header-wishlist" href="/list/">
+          <a class="Header-button Header-wishlist" href="">
             <img alt="View your wishlist" class="Header-wishlistImage"
                  src="https://static.thriftbooks.com/site_images/wishlist-grey.svg">
           </a>
           
           <div id="GlobalCartContainer" class="Header-button Header-cart">
             <div class="GlobalCart-container"><a class="GlobalCart-button is-desktop Header-button Header-cart"
-                                                 href="/shopping-cart/">
-              <svg icon="cart" aria-hidden="true" class="Icon">
+                                                 href="">
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--cart"></use>
               </svg>
               <div class="GlobalCart-count is-singleDigit">0</div>
               <div class="tb-hiddenText">books in your cart</div>
-            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="/shopping-cart/">
-              <svg icon="cart" aria-hidden="true" class="Icon">
+            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
+              <svg aria-hidden="true" class="Icon">
                 <svg id="Icon--cart" class="IconSymbol" viewBox="0 0 73.28 46.3">
                   <g data-name="Layer 2">
                     <g data-name="Layer 1">
@@ -123,51 +131,52 @@
       <div class="Navigation" id="HeaderNavigation">
         <div class="SuperMenu Content" role="menubar">
           <div class="SuperMenu" role="menubar">
-            <div class="SuperMenuItem"><span class="SuperMenuItem-link" role="menuitem">Featured<svg icon="chevron-down"
-                                                                                                     aria-hidden="true"
-                                                                                                     class="Icon"><use
-              data-classes="" xlink:href="#Icon--chevron-down"></use></svg></span>
+            <div class="SuperMenuItem">
+              <span class="SuperMenuItem-link" role="menuitem">Featured
+                <svg aria-hidden="true" class="Icon">
+                  <use data-classes="" xlink:href="#Icon--chevron-down"></use>
+                </svg>
+              </span>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/sitemap/" role="menuitem">Books
-              <svg
-                icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Books
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/collectibles/" role="menuitem">Collectible
-              Books
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">
+              Collectible Books
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/movies-and-tv/" role="menuitem">Movies
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Movies
               &amp; TV
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/music/" role="menuitem">Music
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Music
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/video-games/" role="menuitem">Video Games
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Video Games
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
             
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link MenuLink" href="/blog/" role="menuitem">Blog</a>
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link MenuLink" href="" role="menuitem">Blog</a>
             </div>
           </div>
         </div>
@@ -201,63 +210,88 @@
         
         
         <div id="Work-desktop">
-          
-          
-          <h3 class="Work-backToSearch" id="work-back-to-search"><a href="javascript:;">&lt; Back to Search Results</a>
+          <h3 class="Work-backToSearch"
+              id="work-back-to-search">
+            <a href="springsearch.html">&lt; Back to Search Results</a>
           </h3>
-          <script>
-              const initialHistoryLength = history.length - 1;
-              const backToSearchLink = document.getElementById('work-back-to-search');
-
-              if (!backToSearchLink) {
-                  console.error("Cannot find an element with id of 'work-back-to-search'");
-              } else {
-                  backToSearchLink.addEventListener('click', function () {
-                      history.go(initialHistoryLength - window.history.length);
-                  });
-              }
-          </script>
           
-          <div id="react_lsXQmVby60OkfQpSwK1A">
+          <div>
             <div>
-              <div itemscope="" itemtype="http://schema.org/Book">
+              <div itemscope="" itemtype="">
                 <div class="WorkContainer WorkSelector-moreMargin">
                   <div class="WorkCoverSidebar">
-                    <div class="WorkCover"><img itemprop="image"
-                                                src="https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg"
-                                                alt="Paperback Spring in Action Book"></div>
+                    <div style="font-size:12px; color:#7b7b7b">Click Cover to Look Inside</div>
+                    <div class="WorkCover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img itemprop="image"
+                           id="productImage"
+                           src="https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg"
+                           alt="Paperback Spring in Action Book">
+                    </div>
                     <div class="WorkMeta-shares">
-                      <div class="SocialShareContainer"><a class="SocialShare"
-                                                           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
-                                                           target="_blank"><span
-                        class="SocialShareButton st_facebook_custom"><div class="tb-hiddenText">Share to Facebook</div><svg
-                        icon="social-f" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                             xlink:href="#Icon--social-f"></use></svg></span></a><a
-                        class="SocialShare"
-                        href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942&amp;media=https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg&amp;description=Summary Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Spring F..."
-                        target="_blank"><span class="SocialShareButton st_pinterest_custom"><div class="tb-hiddenText">Share to Pinterest</div><svg
-                        icon="social-pinterest" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                                     xlink:href="#Icon--social-pinterest"></use></svg></span></a><a
-                        class="SocialShare"
-                        href="http://twitter.com/share?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
-                        target="_blank"><span class="SocialShareButton st_twitter_custom"><div class="tb-hiddenText">Share to Twitter</div><svg
-                        icon="social-twitter" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                                   xlink:href="#Icon--social-twitter"></use></svg></span></a><span
-                        class="SocialShare SocialShareButton st_generic_custom" tabindex="0"><span><svg
-                        icon="genericShare" aria-label="Get sharable link to page" class="Icon"><use data-classes=""
-                                                                                                     xlink:href="#Icon--genericShare"></use></svg></span></span>
+                      <div class="SocialShareContainer">
+                        <a class="SocialShare"
+                           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
+                           target="_blank">
+                          <span class="SocialShareButton st_facebook_custom">
+                            <div class="tb-hiddenText">Share to Facebook</div>
+                            <svg icon="social-f" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-f">
+                                <svg id="Icon--social-f" class="IconSymbol" viewBox="0 0 1792 1792"><path
+                                  d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z"></path></svg>
+                              </use>
+                            </svg>
+                          </span>
+                        </a>
+                        <a class="SocialShare"
+                           href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942&amp;media=https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg&amp;description=Summary Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Spring F..."
+                           target="_blank">
+                          <span class="SocialShareButton st_pinterest_custom">
+                            <div class="tb-hiddenText">Share to Pinterest</div>
+                            <svg icon="social-pinterest" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-pinterest"></use>
+                            </svg>
+                          </span>
+                        </a>
+                        <a class="SocialShare"
+                           href="http://twitter.com/share?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
+                           target="_blank">
+                          <span class="SocialShareButton st_twitter_custom">
+                            <div class="tb-hiddenText">Share to Twitter</div>
+                            <svg icon="social-twitter" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-twitter"></use>
+                            </svg>
+                          </span>
+                        </a>
+                        <span class="SocialShare SocialShareButton st_generic_custom" tabindex="0">
+                          <span>
+                            <svg icon="genericShare" aria-label="Get sharable link to page" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--genericShare">
+                                <svg id="Icon--genericShare" class="IconSymbol" viewBox="0 0 96 96"><path d="M74 58c-3.656 0-7.152 1.116-10.192 3.252L39.964 48.104c.02-.252.036-.512.036-.764 0-.14-.004-.276-.012-.416L63.52 34.556C66.616 36.812 70.212 38 74 38c9.924 0 18-8.08 18-18S83.924 2 74 2c-9.92 0-18 8.08-18 18 0 .14.004.272.012.416L32.48 32.78c-3.096-2.252-6.692-3.44-10.48-3.44-9.924 0-18 8.076-18 18 0 9.916 8.076 18 18 18 3.656 0 7.152-1.112 10.192-3.252l23.844 13.148c-.02.252-.036.508-.036.764 0 9.92 8.08 18 18 18s18-8.08 18-18-8.08-18-18-18z"></path></svg>
+                              </use>
+                              </svg>
+                          </span>
+                        </span>
                       </div>
                     </div>
+                    
                     <div class="WorkCoverSidebar-isbns">
-                      <div><p>ISBN: <span class="WorkSelector-bold">1617294942</span></p>
-                        <p>ISBN13: <span class="WorkSelector-bold">9781617294945</span></p></div>
+                      <div><p>ISBN: <span id="isbn" class="WorkSelector-bold">1617294942</span></p>
+                        <p>ISBN13: <span id="isbn13" class="WorkSelector-bold">9781617294945</span></p></div>
                     </div>
                   </div>
                   <div class="WorkInterface AlternativeSelector">
-                    <div><h1 class="WorkMeta-title Alternative Alternative-title" itemprop="name">Spring in Action</h1>
+                    <div>
+                      <h1 class="WorkMeta-title Alternative Alternative-title" itemprop="name">
+                        Spring in Action
+                        <span id="edition">5th Edition</span>
+                        <span id="date">(2018)</span>
+                      </h1>
                       <div class="WorkMeta-byline Alternative Alternative-byline">
-                        <div class="WorkMeta-authors">by <a href="/a/craig-walls/248250/" itemprop="author">Craig
-                          Walls</a></div>
+                        <div class="WorkMeta-authors">by
+                          <a href="" itemprop="author">
+                            Craig Walls
+                          </a>
+                        </div>
                         <div class="WorkMeta-ratingContainer">
                           <div class="WorkMeta-rating WorkMeta-rating-flex" itemprop="aggregateRating" itemscope=""
                                itemtype="http://schema.org/AggregateRating" tabindex="0" aria-label="Rated 5.00 stars">
@@ -296,76 +330,85 @@
                             <button class="NewButton WorkSelector-button is-selected" title="" type="button"
                                     aria-selected="true" aria-current="false">
                               <div class="WorkSelector-bold">Paperback</div>
-                              <div class=""><span>$4.25 - $44.27</span></div>
+                              <div class=""><span>$3.99 - $44.27</span></div>
                               <div class="tb-hiddenText">Paperback $4.25 - $44.27</div>
                             </button>
                           </div>
                         </div>
-                        <div class="WorkSelector-conditionHeader"><h2>Select Condition <img
-                          class="WorkSelector-helpIcon" src="https://static.thriftbooks.com/site_images/helpicon.svg"
-                          alt="ThriftBooks Help Icon"></h2></div>
+                        <div class="WorkSelector-conditionHeader">
+                          <h2>Select Edition</h2>
+                        </div>
                         <div class="WorkSelector-rowContainer">
                           <div class="WorkSelector-row WorkSelector-td-height">
-                            <button class="NewButton WorkSelector-button is-compact" title="" type="button"
-                                    aria-selected="false" aria-current="false">
-                              <div class="WorkSelector-bold">Like New</div>
-                              <div class=""><span>$4.79</span></div>
-                              <div class="tb-hiddenText">Like New $4.79</div>
-                            </button>
-                            <button class="NewButton WorkSelector-button is-compact" title="" type="button"
-                                    aria-selected="false" aria-current="false">
-                              <div class="WorkSelector-bold">Very Good</div>
-                              <div class=""><span>$4.69</span></div>
-                              <div class="tb-hiddenText">Very Good $4.69</div>
-                            </button>
-                            <button class="NewButton WorkSelector-button is-compact" title="" type="button"
-                                    aria-selected="false" aria-current="false">
-                              <div class="WorkSelector-bold">Good</div>
-                              <div class=""><span>$4.25</span></div>
-                              <div class="tb-hiddenText">Good $4.25</div>
-                            </button>
-                            <button class="NewButton WorkSelector-button is-empty is-disabled is-compact" disabled=""
-                                    title="" type="button" aria-selected="false" aria-current="false">
-                              <div class="WorkSelector-bold">Acceptable</div>
-                              <div class=""><span>Unavailable</span></div>
-                              <div class="tb-hiddenText">Acceptable Unavailable</div>
-                            </button>
-                            <button class="NewButton WorkSelector-button is-selected is-compact" title="" type="button"
-                                    aria-selected="true" aria-current="false">
+                            <button class="NewButton WorkSelector-button is-selected is-compact"
+                                    title="" type="button"
+                                    aria-selected="false"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">5th Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2018</div>
                               <div class="WorkSelector-bold">New</div>
-                              <div class="WorkSelector-bold WorkSelector-red"><span>$44.27</span></div>
-                              <div class="tb-hiddenText">New $44.27</div>
+                              <div class="price WorkSelector-bold WorkSelector-red"><span>$44.27</span></div>
+                            </button>
+                            <button class="NewButton WorkSelector-button is-compact"
+                                    title=""
+                                    type="button"
+                                    aria-selected="false"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">4th Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2015</div>
+                              <div class="WorkSelector-bold">Very Good</div>
+                              <div class="price"><span>$4.69</span></div>
+                            </button>
+                            <button class="NewButton WorkSelector-button is-compact"
+                                    title=""
+                                    type="button"
+                                    aria-selected="false"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">3rd Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2011</div>
+                              <div class="WorkSelector-bold">Very Good</div>
+                              <div class="price"><span>$4.25</span></div>
+                            </button>
+                            <button class="NewButton WorkSelector-button is-compact"
+                                    title=""
+                                    type="button"
+                                    aria-selected="false"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">2nd Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2007</div>
+                              <div class="WorkSelector-bold">Acceptable</div>
+                              <div class="price"><span>$4.99</span></div>
+                            </button>
+                            <button class="NewButton WorkSelector-button is-compact"
+                                    title="" type="button"
+                                    aria-selected="true"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">1st Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2005</div>
+                              <div class="WorkSelector-bold">Acceptable</div>
+                              <div class="price"><span>$3.99</span></div>
                             </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="WorkSelector-row">
-                      <div class="AdditionalFormat-button Button-container" title="">
-                        <button class="Button" type="button">
-                          <svg class="Icon Icon-lrg" icon="all-editions" aria-hidden="true">
-                            <use data-classes="Icon-lrg" xlink:href="#Icon--all-editions"></use>
-                          </svg>
-                          <span class="AdditionalFormat-text WorkSelector-bold">See All 8 Editions from $4.19</span>
-                          <svg class="Icon AdditionalFormat-chevron" icon="chevron-right" aria-hidden="true">
-                            <use data-classes="AdditionalFormat-chevron" xlink:href="#Icon--chevron-right"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
                   </div>
+                  
                   <div class="WorkCoverSidebar WorkPriceSidebar">
-                    <div class="WorkSelector-sidebar"><h2>Selected</h2>
+                    <div class="WorkSelector-sidebar">
+                      <h2>Selected</h2>
                       <p>Format: <span class="WorkSelector-bold">Paperback</span></p>
-                      <div><p>Condition: <span class="WorkSelector-bold">New</span></p>
+                      <div><p>Condition: <span id="condition" class="WorkSelector-bold">New</span></p>
                         <p></p></div>
-                      <div class="WorkSelector-price WorkSelector-red"><span>$</span><span class="price">44.27</span>
+                      <div class="WorkSelector-price WorkSelector-red">
+                        <span>$</span>
+                        <span id="bigPrice" class="price">44.27</span>
                       </div>
                       <div class="WorkSelector-listPrice">
-                        <div class="WorkSelector-bold">Save $5.72!</div>
+                        <div id="save" class="WorkSelector-bold">Save $5.72!</div>
                         <div class="WorkSelector-grey">List Price <span class="WorkSelector-strike">$49.99</span></div>
                       </div>
-                      <p>50 Available </p>
+                      <p id="qtyAvailable">50 Available</p>
                       <div class="WorkSelector-quantity"><label>Quantity:
                         <div class="DropdownInput is-dropdown"><select aria-label="Select Drop Down Item">
                           <option value="1">1</option>
@@ -1310,31 +1353,31 @@
             <div class="Footer-linksHalf">
               <h3>Popular Categories</h3>
               <ul>
-                <li><a href="/b/childrens-books/">Children's</a></li>
-                <li><a href="/b/teen-and-young-adult/">Teen and Young Adult</a></li>
-                <li><a href="/b/self-help/">Self-Help</a></li>
-                <li><a href="/b/literature-and-fiction/">Literature &amp; Fiction</a></li>
-                <li><a href="/b/mystery-thriller-and-suspense/">Mystery &amp; Thriller</a></li>
-                <li><a href="/b/science-fiction-and-fantasy/">Sci-fi &amp; Fantasy</a></li>
-                <li><a href="/b/romance/">Romance</a></li>
-                <li><a href="/b/large-print/">Large Print Books</a></li>
-                <li><a href="/b/collectibles/">Rare & Collectible Books</a></li>
+                <li><a href="">Children's</a></li>
+                <li><a href="">Teen and Young Adult</a></li>
+                <li><a href="">Self-Help</a></li>
+                <li><a href="">Literature &amp; Fiction</a></li>
+                <li><a href="">Mystery &amp; Thriller</a></li>
+                <li><a href="">Sci-fi &amp; Fantasy</a></li>
+                <li><a href="">Romance</a></li>
+                <li><a href="">Large Print Books</a></li>
+                <li><a href="">Rare & Collectible Books</a></li>
               </ul>
             </div>
             <div class="Footer-linksHalf">
               <h3>Website</h3>
               <ul>
-                <li><a href="/testimonials/">Testimonials</a></li>
-                <li><a href="/giftcard/">Gift Cards</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/forcemobile/">View Mobile Site</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Gift Cards</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">View Mobile Site</a></li>
               </ul>
               <h3>My Account</h3>
               <ul>
-                <li><a href="/account/ordersummary/">Settings</a></li>
-                <li><a href="/shopping-cart/">Shopping Cart</a></li>
-                <li><a href="/account/ordersummary/">Order History</a></li>
-                <li><a href="/list/">Wish List</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Shopping Cart</a></li>
+                <li><a href="">Order History</a></li>
+                <li><a href="">Wish List</a></li>
               </ul>
             </div>
           </div>
@@ -1343,26 +1386,26 @@
               <h3>Partnerships</h3>
               <ul>
                 <li><a href="http://usedwholesalebooks.com/">Wholesale</a></li>
-                <li><a href="/library/">Library Partnership</a></li>
+                <li><a href="">Library Partnership</a></li>
               </ul>
               <h3>Quick Help</h3>
               <ul>
-                <li><a href="/help/">Help &amp; Support</a></li>
-                <li><a href="/shipping-costs/">Shipping Costs</a></li>
-                <li><a href="/help/#topic-6">Billing</a></li>
-                <li><a href="/help/#topic-30">Return Policy</a></li>
-                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="">Help &amp; Support</a></li>
+                <li><a href="">Shipping Costs</a></li>
+                <li><a href="">Billing</a></li>
+                <li><a href="">Return Policy</a></li>
+                <li><a href="">Contact Us</a></li>
               </ul>
             </div>
             <div class="Footer-linksHalf">
               <h3>About Us</h3>
               <ul>
-                <li><a href="/about-thriftbooks/">Our Story</a></li>
-                <li><a href="/about-thriftbooks/our-purpose/">Our Purpose</a></li>
-                <li><a href="/about-thriftbooks/our-team/">Our Team</a></li>
-                <li><a href="/about-thriftbooks/social-responsibility/">Social Responsibility</a></li>
-                <li><a href="/about-thriftbooks/careers/">Careers</a></li>
-                <li><a href="/about-thriftbooks/news/">News</a></li>
+                <li><a href="">Our Story</a></li>
+                <li><a href="">Our Purpose</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Social Responsibility</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">News</a></li>
               </ul>
             </div>
           </div>
@@ -1436,12 +1479,18 @@
       </div>
       <div class="Colophon Content">
         <div class="Colophon-content">
-          <div><span>Copyright &copy; 2020 Thriftbooks.com</span> <a href="/terms-of-use/">Terms of Use</a> | <a
-            href="/privacy-policy/">Privacy Policy</a> | <a href="/b/do-not-sell-my-personal-information/">Do Not
-            Sell My Personal Information</a> | <a href="/s/accessibility-statement/">Accessibility Statement</a>
-            <br/><span>ThriftBooks<sup>&reg;</sup> and the ThriftBooks<sup>&reg;</sup> logo are registered trademarks
-                of Thrift Books Global, LLC</span></div>
-          <a href="/site-security/" class="Footer-goDaddy"><img
+          <div>
+            <span>Copyright &copy; 2020 Thriftbooks.com</span>
+            <a href="">Terms of Use</a> |
+            <a href="">Privacy Policy</a> |
+            <a href="">
+              Do Not Sell My Personal Information</a> |
+            <a href="">Accessibility Statement</a>
+            <br/>
+            <span>ThriftBooks<sup>&reg;</sup> and the ThriftBooks<sup>&reg;</sup> logo are registered trademarks
+                of Thrift Books Global, LLC</span>
+          </div>
+          <a href="" class="Footer-goDaddy"><img
             src="https://static.thriftbooks.com/images/goDaddy.gif" alt="GoDaddy Verified and Secured"/></a>
           <div id="gtsIcon" class="GoogleTrustedStore"></div>
         </div>
@@ -1450,10 +1499,148 @@
   
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width:1200px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe id="frame" src="files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                type="application/pdf"
+                style="width:1100px; height:80vh" ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
 
+    document.addEventListener("DOMContentLoaded", function () {
+        let elements = document.querySelectorAll(".WorkSelector-button");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].addEventListener("click", function (e) {
+                updatePage(e.currentTarget, i);
+            });
+        }
+    });
+
+    function updatePage(element, index) {
+        element.classList.add("is-selected");
+        let elements = document.querySelectorAll(".WorkSelector-button");
+        for (let i = 0; i < elements.length; i++) {
+            if (i === 0) {
+
+            } else if (elements[i] !== element) {
+                elements[i].classList.remove("is-selected");
+                for (let j = 0; j < elements[i].childNodes.length; j++) {
+                    if (elements[i].childNodes[j].classList !== undefined) {
+                        if (elements[i].childNodes[j].classList.contains("price")) {
+                            elements[i].childNodes[j].classList.remove("WorkSelector-red");
+                            elements[i].childNodes[j].classList.remove("WorkSelector-bold");
+                        }
+                    }
+                }
+            } else {
+                for (let j = 0; j < elements[i].childNodes.length; j++) {
+                    if (elements[i].childNodes[j].classList !== undefined) {
+                        if (elements[i].childNodes[j].classList.contains("price")) {
+                            elements[i].childNodes[j].classList.add("WorkSelector-red");
+                            elements[i].childNodes[j].classList.add("WorkSelector-bold");
+                        }
+                    }
+                }
+            }
+        }
+        let imageElement = document.getElementById("productImage");
+        let edition = document.getElementById("edition");
+        let date = document.getElementById("date");
+        let condition = document.getElementById("condition");
+        let bigPrice = document.getElementById("bigPrice");
+        let qtyAvailable = document.getElementById("qtyAvailable");
+        let save = document.getElementById("save");
+        let isbn = document.getElementById("isbn");
+        let isbn13 = document.getElementById("isbn13");
+        let frame = document.getElementById("frame");
+        switch (index) {
+            case 1: // 5 ed
+                imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
+                edition.innerText = "5th Edition";
+                date.innerText = "(2018)";
+                condition.innerText = "New";
+                bigPrice.innerText = "44.27";
+                qtyAvailable.innerText = "50 Available";
+                save.innerText = "Save $5.72 !";
+                isbn.innerText = "1617294942";
+                isbn13.innerText = "9781617294945";
+                frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                break;
+            case 2: // 4 ed
+                imageElement.src = "https://img.thriftbooks.com/api/images/l/3919fde90857cd5a1deb16ac48ea2a04eb898ca5.jpg";
+                edition.innerText = "4th Edition";
+                date.innerText = "(2015)";
+                condition.innerText = "Very Good";
+                bigPrice.innerText = "4.69";
+                qtyAvailable.innerText = "1 Available";
+                save.innerText = "Save $45.30 !";
+                isbn.innerText = "161729120X";
+                isbn13.innerText = "9781617291203";
+                frame.src = "files/SpringInAction4TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                break;
+            case 3: // 3 ed
+                imageElement.src = "images/SpringInAction3Cover.jpg";
+                edition.innerText = "3rd Edition";
+                date.innerText = "(2011)";
+                condition.innerText = "Very Good";
+                bigPrice.innerText = "4.25";
+                qtyAvailable.innerText = "2 Available";
+                save.innerText = "Save $45.74 !";
+                isbn.innerText = "1935182358";
+                isbn13.innerText = "9781935182351";
+                frame.src = "files/SpringInAction3TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                break;
+            case 4: // 2 ed
+                imageElement.src = "https://img.thriftbooks.com/api/images/l/fbcc24d3d833762461246bd217194c1df9246087.jpg";
+                edition.innerText = "2nd Edition";
+                date.innerText = "(2007)";
+                condition.innerText = "Acceptable";
+                bigPrice.innerText = "4.99";
+                qtyAvailable.innerText = "1 Available";
+                save.innerText = "Save $45.00 !";
+                isbn.innerText = "1933988134";
+                isbn13.innerText = "9781933988139";
+                frame.src = "files/SpringInAction2TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                break;
+            case 5: // 1 ed
+                imageElement.src = "https://img.thriftbooks.com/api/images/l/15663828e4d32892b4187fb39671d18030123a2c.jpg";
+                edition.innerText = "1st Edition";
+                date.innerText = "(2005)";
+                condition.innerText = "Acceptable";
+                bigPrice.innerText = "3.99";
+                qtyAvailable.innerText = "2 Available";
+                save.innerText = "Save $46.00 !";
+                isbn.innerText = "1932394354";
+                isbn13.innerText = "9781932394351";
+                frame.src = "files/SpringInAction1TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                break;
+            default:
+                imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
+                edition.innerText = "5th Edition";
+                date.innerText = "(2018)";
+                condition.innerText = "New";
+                bigPrice.innerText = "44.27";
+                qtyAvailable.innerText = "50 Available";
+                save.innerText = "Save $5.72 !";
+                isbn.innerText = "";
+                isbn13.innerText = "9781617294945";
+                frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+        }
+    }
+
     function checkSubmit(e) {
-        if(e && e.keyCode === 13) {
+        if (e && e.keyCode === 13) {
             getInputValue();
         }
     }
@@ -1462,7 +1649,7 @@
         let inputVal = document.getElementById("search-input-id").value.toLowerCase();
         if (inputVal === "spring in action") {
             window.location.href = "springsearch.html"
-        } else if (inputVal === "pro spring 5"){
+        } else if (inputVal === "pro spring 5") {
             window.location.href = "prospringsearch.html"
         }
     }

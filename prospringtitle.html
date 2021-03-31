@@ -27,19 +27,18 @@
 <div class="FormOuterContainer">
   <div class="Container">
     <div id="GdprEyebrow"></div>
-    
-    
+  
+  
     <div>
       <a href="#TBContent" class="SkipToContent" title="Skip to content" tabindex="0">Skip to content</a>
       <div class="SuperHeader" id="SuperHeader"></div>
-      
       <div class="DesktopHeader Content">
         <div class="DesktopHeader-left">
           <a class="DesktopHeader-logoLink" href="index.html">
             <img alt="ThriftBooks" class="DesktopHeader-logo"
                  src="https://static.thriftbooks.com/images/tblogo-green_20200225.svg">
           </a>
-          
+        
           <div class="SearchContainer SearchContainer--desktop" id="GlobalSearch">
             <div class="Search" onKeyPress="return checkSubmit(event)">
               <input type="text"
@@ -48,23 +47,22 @@
                      placeholder="Search 13 million titles by title, author, or ISBN"
                      aria-label="Search 13 million titles by title, author, or ISBN">
               <div class="Button-container Search-submit is-flat">
-                <button type="button" class="Button" onclick="getInputValue();">
+                <button type="button" class="Button" onclick="checkSubmit(e);">
                   <svg class="Icon" aria-hidden="true">
                     <svg id="Icon--search" class="IconSymbol" viewBox="0 0 24 23.5">
                       <path
-                        d="M23.3 19.5L18.9 15c.8-1.5 1.3-3.2 1.3-5 0-5.5-4.5-10-10.1-10S0 4.5 0 10.1s4.5 10.1 10.1 10.1c2.1 0 4-.6 5.6-1.7l4.3 4.3c.5.5 1.1.7 1.6.7.6 0 1.2-.2 1.6-.7 1-.9 1-2.4.1-3.3zM3.1 10.1c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.2-7-7z"></path>
+                        d="M23.3 19.5L18.9 15c.8-1.5 1.3-3.2 1.3-5 0-5.5-4.5-10-10.1-10S0 4.5 0 10.1s4.5 10.1
+                        10.1 10.1c2.1 0 4-.6 5.6-1.7l4.3 4.3c.5.5 1.1.7 1.6.7.6 0 1.2-.2 1.6-.7 1-.9
+                        1-2.4.1-3.3zM3.1 10.1c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.2-7-7z">
+                      </path>
                     </svg>
                   </svg>
-                
                 </button>
               </div>
             </div>
           </div>
         </div>
-        
         <div class="DesktopHeader-right">
-          
-          
           <div id="UserComponent">
             <div>
               <div class="UserComponent-container" tabindex="0">
@@ -72,7 +70,7 @@
                   <div class="UserComponent-greeting"><span class="bold">Hi Reader!</span>
                     <div class="UserComponent-login">Log In</div>
                   </div>
-                  <svg icon="chevron-down" class="Icon UserComponent-chevron" aria-hidden="true">
+                  <svg class="Icon UserComponent-chevron" aria-hidden="true">
                     <use data-classes="UserComponent-chevron" xlink:href="#Icon--chevron-down">
                       <svg id="Icon--chevron-down" class="IconSymbol" viewBox="970 -347 24 15.4">
                         <path
@@ -84,24 +82,24 @@
               </div>
             </div>
           </div>
-          
+        
           <div class="Header-verticalBar"></div>
-          
-          <a class="Header-button Header-wishlist" href="/list/">
+        
+          <a class="Header-button Header-wishlist" href="">
             <img alt="View your wishlist" class="Header-wishlistImage"
                  src="https://static.thriftbooks.com/site_images/wishlist-grey.svg">
           </a>
-          
+        
           <div id="GlobalCartContainer" class="Header-button Header-cart">
             <div class="GlobalCart-container"><a class="GlobalCart-button is-desktop Header-button Header-cart"
-                                                 href="/shopping-cart/">
-              <svg icon="cart" aria-hidden="true" class="Icon">
+                                                 href="">
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--cart"></use>
               </svg>
               <div class="GlobalCart-count is-singleDigit">0</div>
               <div class="tb-hiddenText">books in your cart</div>
-            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="/shopping-cart/">
-              <svg icon="cart" aria-hidden="true" class="Icon">
+            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
+              <svg aria-hidden="true" class="Icon">
                 <svg id="Icon--cart" class="IconSymbol" viewBox="0 0 73.28 46.3">
                   <g data-name="Layer 2">
                     <g data-name="Layer 1">
@@ -116,63 +114,64 @@
             </a></div>
           </div>
         </div>
-      
+    
       </div>
-      
-      
+    
+    
       <div class="Navigation" id="HeaderNavigation">
         <div class="SuperMenu Content" role="menubar">
           <div class="SuperMenu" role="menubar">
-            <div class="SuperMenuItem"><span class="SuperMenuItem-link" role="menuitem">Featured<svg icon="chevron-down"
-                                                                                                     aria-hidden="true"
-                                                                                                     class="Icon"><use
-              data-classes="" xlink:href="#Icon--chevron-down"></use></svg></span>
-            
+            <div class="SuperMenuItem">
+              <span class="SuperMenuItem-link" role="menuitem">Featured
+                <svg aria-hidden="true" class="Icon">
+                  <use data-classes="" xlink:href="#Icon--chevron-down"></use>
+                </svg>
+              </span>
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/sitemap/" role="menuitem">Books
-              <svg
-                icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Books
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-            
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/collectibles/" role="menuitem">Collectible
-              Books
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">
+              Collectible Books
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-            
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/movies-and-tv/" role="menuitem">Movies
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Movies
               &amp; TV
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-            
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/music/" role="menuitem">Music
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Music
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-            
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="/b/video-games/" role="menuitem">Video Games
-              <svg icon="chevron-down" aria-hidden="true" class="Icon">
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Video Games
+              <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-            
+          
             </div>
-            <div class="SuperMenuItem"><a class="SuperMenuItem-link MenuLink" href="/blog/" role="menuitem">Blog</a>
+            <div class="SuperMenuItem"><a class="SuperMenuItem-link MenuLink" href="" role="menuitem">Blog</a>
             </div>
           </div>
         </div>
       </div>
-      
+    
       <div id="CartEyebrowContainer"></div>
       <div id="TBContent"></div>
     </div>
@@ -1027,7 +1026,7 @@
         </div>
       </div>
     </div>
-    
+  
     <div class="FooterContainer">
       <div class="Footer-bg"></div>
       <div class="Footer Content">
@@ -1036,31 +1035,31 @@
             <div class="Footer-linksHalf">
               <h3>Popular Categories</h3>
               <ul>
-                <li><a href="/b/childrens-books/">Children's</a></li>
-                <li><a href="/b/teen-and-young-adult/">Teen and Young Adult</a></li>
-                <li><a href="/b/self-help/">Self-Help</a></li>
-                <li><a href="/b/literature-and-fiction/">Literature &amp; Fiction</a></li>
-                <li><a href="/b/mystery-thriller-and-suspense/">Mystery &amp; Thriller</a></li>
-                <li><a href="/b/science-fiction-and-fantasy/">Sci-fi &amp; Fantasy</a></li>
-                <li><a href="/b/romance/">Romance</a></li>
-                <li><a href="/b/large-print/">Large Print Books</a></li>
-                <li><a href="/b/collectibles/">Rare & Collectible Books</a></li>
+                <li><a href="">Children's</a></li>
+                <li><a href="">Teen and Young Adult</a></li>
+                <li><a href="">Self-Help</a></li>
+                <li><a href="">Literature &amp; Fiction</a></li>
+                <li><a href="">Mystery &amp; Thriller</a></li>
+                <li><a href="">Sci-fi &amp; Fantasy</a></li>
+                <li><a href="">Romance</a></li>
+                <li><a href="">Large Print Books</a></li>
+                <li><a href="">Rare & Collectible Books</a></li>
               </ul>
             </div>
             <div class="Footer-linksHalf">
               <h3>Website</h3>
               <ul>
-                <li><a href="/testimonials/">Testimonials</a></li>
-                <li><a href="/giftcard/">Gift Cards</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/forcemobile/">View Mobile Site</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Gift Cards</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">View Mobile Site</a></li>
               </ul>
               <h3>My Account</h3>
               <ul>
-                <li><a href="/account/ordersummary/">Settings</a></li>
-                <li><a href="/shopping-cart/">Shopping Cart</a></li>
-                <li><a href="/account/ordersummary/">Order History</a></li>
-                <li><a href="/list/">Wish List</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Shopping Cart</a></li>
+                <li><a href="">Order History</a></li>
+                <li><a href="">Wish List</a></li>
               </ul>
             </div>
           </div>
@@ -1069,26 +1068,26 @@
               <h3>Partnerships</h3>
               <ul>
                 <li><a href="http://usedwholesalebooks.com/">Wholesale</a></li>
-                <li><a href="/library/">Library Partnership</a></li>
+                <li><a href="">Library Partnership</a></li>
               </ul>
               <h3>Quick Help</h3>
               <ul>
-                <li><a href="/help/">Help &amp; Support</a></li>
-                <li><a href="/shipping-costs/">Shipping Costs</a></li>
-                <li><a href="/help/#topic-6">Billing</a></li>
-                <li><a href="/help/#topic-30">Return Policy</a></li>
-                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="">Help &amp; Support</a></li>
+                <li><a href="">Shipping Costs</a></li>
+                <li><a href="">Billing</a></li>
+                <li><a href="">Return Policy</a></li>
+                <li><a href="">Contact Us</a></li>
               </ul>
             </div>
             <div class="Footer-linksHalf">
               <h3>About Us</h3>
               <ul>
-                <li><a href="/about-thriftbooks/">Our Story</a></li>
-                <li><a href="/about-thriftbooks/our-purpose/">Our Purpose</a></li>
-                <li><a href="/about-thriftbooks/our-team/">Our Team</a></li>
-                <li><a href="/about-thriftbooks/social-responsibility/">Social Responsibility</a></li>
-                <li><a href="/about-thriftbooks/careers/">Careers</a></li>
-                <li><a href="/about-thriftbooks/news/">News</a></li>
+                <li><a href="">Our Story</a></li>
+                <li><a href="">Our Purpose</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Social Responsibility</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">News</a></li>
               </ul>
             </div>
           </div>
@@ -1162,12 +1161,18 @@
       </div>
       <div class="Colophon Content">
         <div class="Colophon-content">
-          <div><span>Copyright &copy; 2020 Thriftbooks.com</span> <a href="/terms-of-use/">Terms of Use</a> | <a
-            href="/privacy-policy/">Privacy Policy</a> | <a href="/b/do-not-sell-my-personal-information/">Do Not
-            Sell My Personal Information</a> | <a href="/s/accessibility-statement/">Accessibility Statement</a>
-            <br/><span>ThriftBooks<sup>&reg;</sup> and the ThriftBooks<sup>&reg;</sup> logo are registered trademarks
-                of Thrift Books Global, LLC</span></div>
-          <a href="/site-security/" class="Footer-goDaddy"><img
+          <div>
+            <span>Copyright &copy; 2020 Thriftbooks.com</span>
+            <a href="">Terms of Use</a> |
+            <a href="">Privacy Policy</a> |
+            <a href="">
+              Do Not Sell My Personal Information</a> |
+            <a href="">Accessibility Statement</a>
+            <br/>
+            <span>ThriftBooks<sup>&reg;</sup> and the ThriftBooks<sup>&reg;</sup> logo are registered trademarks
+                of Thrift Books Global, LLC</span>
+          </div>
+          <a href="" class="Footer-goDaddy"><img
             src="https://static.thriftbooks.com/images/goDaddy.gif" alt="GoDaddy Verified and Secured"/></a>
           <div id="gtsIcon" class="GoogleTrustedStore"></div>
         </div>
