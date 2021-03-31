@@ -15,7 +15,7 @@
   <meta name="distribution" content="Global"/>
   
   <link rel="icon" href="https://static.thriftbooks.com/images/favicon.ico" type="image/x-icon"/>
-  <link rel="stylesheet" href="style/versioned/bid-49376/homepage.css">
+  <link rel="stylesheet" href="style/versioned/bid-49376/mainmvc.css">
   
   <meta name="description"
         content="Over 13 million titles available from the largest seller of used books. Cheap prices on high quality gently used books. Free shipping over $10."/>
@@ -35,13 +35,13 @@
       
       <div class="DesktopHeader Content">
         <div class="DesktopHeader-left">
-          <a class="DesktopHeader-logoLink" href="/">
+          <a class="DesktopHeader-logoLink" href="index.html">
             <img alt="ThriftBooks" class="DesktopHeader-logo"
                  src="https://static.thriftbooks.com/images/tblogo-green_20200225.svg">
           </a>
           
           <div class="SearchContainer SearchContainer--desktop" id="GlobalSearch">
-            <div class="Search">
+            <div class="Search" onKeyPress="return checkSubmit(event)">
               <input type="text"
                      id="search-input-id"
                      class="Search-input"
@@ -176,9 +176,856 @@
       <div id="CartEyebrowContainer"></div>
       <div id="TBContent"></div>
     </div>
-  
+    
     <div class="NonHeaderContentWrapper">
-  
+      <div class="Content">
+        
+        
+        <div id="Work-desktop">
+          
+          
+          <h3 class="Work-backToSearch" id="work-back-to-search"><a href="javascript:;">&lt; Back to Search Results</a>
+          </h3>
+          <script>
+              const initialHistoryLength = history.length - 1;
+              const backToSearchLink = document.getElementById('work-back-to-search');
+
+              if (!backToSearchLink) {
+                  console.error("Cannot find an element with id of 'work-back-to-search'");
+              } else {
+                  backToSearchLink.addEventListener('click', function () {
+                      history.go(initialHistoryLength - window.history.length);
+                  });
+              }
+          </script>
+          
+          <div id="react_Y9HcloGeAUOsujJuYpOQ">
+            <div>
+              <div itemscope="" itemtype="http://schema.org/Book">
+                <div class="WorkContainer WorkSelector-moreMargin">
+                  <div class="WorkCoverSidebar">
+                    <div class="WorkCover"><img itemprop="image"
+                                                src="https://img.thriftbooks.com/api/images/m/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg"
+                                                alt="Paperback Pro Spring 5 : An in-Depth Guide to the Spring Framework and Its Tools Book">
+                    </div>
+                    <div class="WorkMeta-shares">
+                      <div class="SocialShareContainer"><a class="SocialShare"
+                                                           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073"
+                                                           target="_blank"><span
+                        class="SocialShareButton st_facebook_custom"><div class="tb-hiddenText">Share to Facebook</div><svg
+                        icon="social-f" aria-hidden="true" class="Icon"><use data-classes=""
+                                                                             xlink:href="#Icon--social-f"></use></svg></span></a><a
+                        class="SocialShare"
+                        href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073&amp;media=https://img.thriftbooks.com/api/images/m/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg&amp;description=Master Spring basics and core topics, and share the authors' insights and real-world experiences with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework to build the various tiers and parts of an enterprise Java application: transactions, web and presentation tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and techniques covered in Pro Spring 5 and see how they work together. This book upd..."
+                        target="_blank"><span class="SocialShareButton st_pinterest_custom"><div class="tb-hiddenText">Share to Pinterest</div><svg
+                        icon="social-pinterest" aria-hidden="true" class="Icon"><use data-classes=""
+                                                                                     xlink:href="#Icon--social-pinterest"></use></svg></span></a><a
+                        class="SocialShare"
+                        href="http://twitter.com/share?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073"
+                        target="_blank"><span class="SocialShareButton st_twitter_custom"><div class="tb-hiddenText">Share to Twitter</div><svg
+                        icon="social-twitter" aria-hidden="true" class="Icon"><use data-classes=""
+                                                                                   xlink:href="#Icon--social-twitter"></use></svg></span></a><span
+                        class="SocialShare SocialShareButton st_generic_custom" tabindex="0"><span><svg
+                        icon="genericShare" aria-label="Get sharable link to page" class="Icon"><use data-classes=""
+                                                                                                     xlink:href="#Icon--genericShare"></use></svg></span></span>
+                      </div>
+                    </div>
+                    <div class="WorkCoverSidebar-isbns">
+                      <div><p>ISBN: <span class="WorkSelector-bold">1484228073</span></p>
+                        <p>ISBN13: <span class="WorkSelector-bold">9781484228074</span></p></div>
+                    </div>
+                  </div>
+                  <div class="WorkInterface AlternativeSelector">
+                    <div><h1 class="WorkMeta-title Alternative Alternative-title" itemprop="name">Pro Spring 5 : An
+                      in-Depth Guide to the Spring Framework and Its Tools</h1>
+                      <div class="WorkMeta-byline Alternative Alternative-byline">
+                        <div class="WorkMeta-authors">by <a href="/a/iuliana-cosmina/2886058/" itemprop="author">Iuliana
+                          Cosmina</a></div>
+                        <div class="WorkMeta-ratingContainer">
+                          <div class="WorkMeta-rating WorkMeta-rating-flex" itemprop="aggregateRating" itemscope=""
+                               itemtype="http://schema.org/AggregateRating" tabindex="0" aria-label="Rated 0.00 stars">
+                            <meta content="0.00" itemprop="ratingValue">
+                            <meta content="0" itemprop="reviewCount">
+                            <span class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
+                              class="WorkMeta-ratingStar"
+                              src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
+                              aria-hidden="true"></span><span class="WorkMeta-ratingStar"
+                                                              title="Log in to rate this book" style="cursor: default;"><img
+                            class="WorkMeta-ratingStar"
+                            src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
+                            aria-hidden="true"></span><span class="WorkMeta-ratingStar" title="Log in to rate this book"
+                                                            style="cursor: default;"><img class="WorkMeta-ratingStar"
+                                                                                          src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                                                                                          alt="Empty Star"
+                                                                                          aria-hidden="true"></span><span
+                            class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
+                            class="WorkMeta-ratingStar"
+                            src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
+                            aria-hidden="true"></span><span class="WorkMeta-ratingStar" title="Log in to rate this book"
+                                                            style="cursor: default;"><img class="WorkMeta-ratingStar"
+                                                                                          src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                                                                                          alt="Empty Star"
+                                                                                          aria-hidden="true"></span>
+                          </div>
+                          <span class="WorkMeta-noReviews">No Customer Reviews</span></div>
+                      </div>
+                    </div>
+                    <div class="WorkMeta-overview-noSelector">
+                      <div>
+                        <div>
+                          <p class="WorkMeta-overview"><span>Master Spring basics and core topics, and share the authors' insights and real-world experiences with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework to build the various tiers and parts of an enterprise Java application: transactions, web and presentation tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and techniques covered in Pro Spring 5...</span>
+                            <button class="is-link" title="" type="button">Read Full Overview</button>
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="WorkMeta-details is-collapsable is-collapsed">
+                          <button class="WorkMeta-detailsCollapseButton is-link" title="" type="button">Product Details
+                            <svg icon="caret-down" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--caret-down"></use>
+                            </svg>
+                          </button>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span
+                            class="WorkMeta-detail">Format:</span><span class="WorkMeta-detail">Paperback</span></div>
+                          <div class="WorkMeta-detailsRow is-collapsed is-important"><span class="WorkMeta-detail">Language:</span><span
+                            class="WorkMeta-detail">English</span></div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">ISBN:</span><span
+                            class="WorkMeta-detail">1484228073</span></div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span
+                            class="WorkMeta-detail">ISBN13:</span><span class="WorkMeta-detail">9781484228074</span>
+                          </div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span
+                            class="WorkMeta-detail">Release Date:</span><span
+                            class="WorkMeta-detail">October 2017</span></div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span
+                            class="WorkMeta-detail">Publisher:</span><span class="WorkMeta-detail">Apress L. P.</span>
+                          </div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span
+                            class="WorkMeta-detail">Weight:</span><span class="WorkMeta-detail">3.64 lbs.</span></div>
+                          <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Dimensions:</span><span
+                            class="WorkMeta-detail">10.0" x 7.0" x 10.0"</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="WorkSelector-row">
+                      <div class="AdditionalFormat-button Button-container" title="">
+                        <button class="Button" type="button">
+                          <svg class="Icon Icon-lrg" icon="all-editions" aria-hidden="true">
+                            <use data-classes="Icon-lrg" xlink:href="#Icon--all-editions"></use>
+                          </svg>
+                          <span class="AdditionalFormat-text WorkSelector-bold">See 1 Edition from $41.07</span>
+                          <svg class="Icon AdditionalFormat-chevron" icon="chevron-right" aria-hidden="true">
+                            <use data-classes="AdditionalFormat-chevron" xlink:href="#Icon--chevron-right"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="WorkCoverSidebar WorkPriceSidebar">
+                    <div class="WorkSelector-sidebar"><h2>Selected</h2>
+                      <p>Format: <span class="WorkSelector-bold">Paperback</span></p>
+                      <div><p>Condition: <span class="WorkSelector-bold">New</span></p>
+                        <p></p></div>
+                      <div class="WorkSelector-price WorkSelector-red"><span>$</span><span class="price">41.07</span>
+                      </div>
+                      <div class="WorkSelector-listPrice">
+                        <div class="WorkSelector-bold">Save $8.92!</div>
+                        <div class="WorkSelector-grey">List Price <span class="WorkSelector-strike">$49.99</span></div>
+                      </div>
+                      <p>50 Available </p>
+                      <div class="WorkSelector-quantity"><label>Quantity:
+                        <div class="DropdownInput is-dropdown"><select aria-label="Select Drop Down Item">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="overflow">10+</option>
+                        </select></div>
+                      </label></div>
+                      <div class="AddToCartButton">
+                        <div class="AddToCartButton-Desktop Button-container is-small" title="">
+                          <button class="Button" type="button">Add to Cart</button>
+                        </div>
+                      </div>
+                      <div class="WorkTab-addToWishlist WorkSelector-addToWishlist">
+                        <div class="WorkPriceContainer-wishlistButtonContainer">
+                          <div class="WorkWishList no-outline">
+                            <div class="WorkWishListButton"><a
+                              href="/account/login/?wl=y&amp;wlIdEdition=18330376&amp;returnurl=https://www.thriftbooks.com/w/pro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina/17430041/?resultid=6ca1a3e1-1cbc-476c-b1f2-5e3d450ce607#isbn=1484228073&amp;edition=18330376">
+                              <svg icon="new-wishlist" aria-hidden="true" class="Icon">
+                                <use data-classes="" xlink:href="#Icon--new-wishlist"></use>
+                              </svg>
+                              Add to Wish List</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="WorkRecommendations">
+          <div>
+            <div class="u-horizontalDivider"></div>
+            <div class="BookSlider-green BookSlider-condensed">
+              <div class="BookSliderNav has-next has-prev RecSection-desktop" id="recSection0">
+                <div class="RecSection-Header"><h2 class="RecSection-title">You Might Also Enjoy</h2></div>
+                <div>
+                  <div class="BookSlider-nav BookSlider-prev u-fade u-hidden">
+                    <div class="BookSlider-navCircle">
+                      <svg icon="chevron-left" aria-hidden="true" class="Icon">
+                        <use data-classes="" xlink:href="#Icon--chevron-left"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="BookSlider-nav BookSlider-next">
+                    <div class="BookSlider-navCircle">
+                      <svg icon="chevron-right" aria-hidden="true" class="Icon">
+                        <use data-classes="" xlink:href="#Icon--chevron-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div style="position: relative; overflow: hidden; width: auto; height: calc(8rem + 182px);">
+                  <div
+                    style="position: absolute; inset: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;"
+                    class="dragscroll">
+                    <div>
+                      <div class="BookSliderDesktop" id="bookSliderWorkPageDesktop0">
+                        <div class="BookSlider-MobileWrapper" id="wrapper0WorkPageDesktop" style="width: 3910px;"><a
+                          class="BookSlideDesktop-Container" href="/w/the-woman-in-the-window_aj-finn/13866988/"
+                          aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book0WorkPageDesktop"><img
+                              alt="The Woman in the Window"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/6F25959C271CE0EB2F6994E6C494F840BFB3ED4D.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/i/s/6F25959C271CE0EB2F6994E6C494F840BFB3ED4D.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Woman in the Window</div>
+                              <div class="BookSlide-Author">A.J. Finn</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-power-of-now-by-eckhart-tolle/248908/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book1WorkPageDesktop"><img
+                              alt="The Power of Now"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/8374A1B76368774B7BC44A55F04D7A7D5F902958.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/i/s/8374A1B76368774B7BC44A55F04D7A7D5F902958.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Power of Now</div>
+                              <div class="BookSlide-Author">Eckhart Tolle</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$4.19</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-woman-in-cabin-10_ruth-ware/10881688/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book2WorkPageDesktop"><img
+                              alt="The Woman in Cabin 10"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/BA623EF0B3BFB37D6E110599534FD4B6058D2A13.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/i/s/BA623EF0B3BFB37D6E110599534FD4B6058D2A13.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Woman in Cabin 10</div>
+                              <div class="BookSlide-Author">Ruth Ware</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-color-purple-by-alice-walker/251248/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book3WorkPageDesktop"><img
+                              alt="The Color Purple"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/3F66A2785E82EE541A71919D2CAF75B479C0D1FC.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/i/s/3F66A2785E82EE541A71919D2CAF75B479C0D1FC.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Color Purple</div>
+                              <div class="BookSlide-Author">Alice Walker</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-secret-garden-by-frances-hodgson-burnett/265048/" aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book4WorkPageDesktop"><img
+                              alt="The Secret Garden"
+                              data-src="https://img.thriftbooks.com/api/images/s/b71c339b6cfa3199654f33952104eaa147f26761.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/s/b71c339b6cfa3199654f33952104eaa147f26761.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Secret Garden</div>
+                              <div class="BookSlide-Author">Frances Hodgson Burnett</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-battle-of-the-labyrinth-by-rick-riordan/251028/" aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book5WorkPageDesktop"><img
+                              alt="The Battle of the Labyrinth"
+                              data-src="https://img.thriftbooks.com/api/images/s/53b1633fbe3f3352b700e5d96f16cf40ce232afe.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/s/53b1633fbe3f3352b700e5d96f16cf40ce232afe.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Battle of the Labyrinth</div>
+                              <div class="BookSlide-Author">Rick Riordan</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-sun-also-rises_ernest-hemingway_barrons-book-notes/247888/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book6WorkPageDesktop"><img
+                              alt="The Sun Also Rises"
+                              data-src="https://img.thriftbooks.com/api/images/s/6f24d0db5edd00708a0d41e3cdf7fd818916f6fb.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/s/6f24d0db5edd00708a0d41e3cdf7fd818916f6fb.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Sun Also Rises</div>
+                              <div class="BookSlide-Author">Ernest Hemingway</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-intelligent-investor-by-benjamin-graham/248388/" aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book7WorkPageDesktop"><img
+                              alt="The Intelligent Investor"
+                              data-src="https://img.thriftbooks.com/api/images/s/4a699f88411c55ca17f59ae55c026c08593b86e6.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Intelligent Investor</div>
+                              <div class="BookSlide-Author">Benjamin Graham</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$6.69</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/brisingr_christopher-paolini/247088/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book8WorkPageDesktop"><img alt="Brisingr"
+                                                                                                          data-src="https://img.thriftbooks.com/api/images/s/a0c96a49284e3ea4682effe842eb83b02502853a.jpg"
+                                                                                                          class="lazyload">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Brisingr</div>
+                              <div class="BookSlide-Author">Christopher Paolini</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$4.05</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/inheritance-by-christopher-paolini/246488/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book9WorkPageDesktop"><img
+                              alt="Inheritance"
+                              data-src="https://img.thriftbooks.com/api/images/s/7665777599ed011a6933d2a24e1dc903957c5152.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Inheritance</div>
+                              <div class="BookSlide-Author">Christopher Paolini</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$6.49</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/song-of-solomon_toni-morrison/249528/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book10WorkPageDesktop"><img
+                              alt="Song of Solomon"
+                              data-src="https://img.thriftbooks.com/api/images/s/b06b66943583804924f3b5f76afcefd6d40dd56b.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Song of Solomon</div>
+                              <div class="BookSlide-Author">Toni Morrison</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-maze-runner_james-dashner/246308/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book11WorkPageDesktop"><img
+                              alt="The Maze Runner"
+                              data-src="https://img.thriftbooks.com/api/images/s/b1f6a75c60fb570477ba93940e939e39ad14a778.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Maze Runner</div>
+                              <div class="BookSlide-Author">James Dashner</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-innocent-by-david-baldacci/246848/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book12WorkPageDesktop"><img
+                              alt="The Innocent"
+                              data-src="https://img.thriftbooks.com/api/images/s/6a463272b307136b6ded28bc6fc499426848e574.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Innocent</div>
+                              <div class="BookSlide-Author">David Baldacci</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/a-discovery-of-witches_deborah-harkness/250408/" aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book13WorkPageDesktop"><img
+                              alt="A Discovery of Witches"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/F72844BE5E40ACF1F8BD3772D9474213385FD629.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">A Discovery of Witches</div>
+                              <div class="BookSlide-Author">Deborah Harkness</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$5.89</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-first-days-of-school-how-to-be-an-effective-teacher_harry-k-wong_rosemary-t-wong/248228/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book14WorkPageDesktop"><img
+                              alt="The First Days Of School: How To Be An Effective Teacher"
+                              data-src="https://img.thriftbooks.com/api/images/s/97fd048e610d40762f8c1042f073c902a1d9259f.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The First Days Of School: How To Be An Effective Teacher
+                              </div>
+                              <div class="BookSlide-Author">Harry K. Wong</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$4.05</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/the-getaway_jeff-kinney/13889768/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book15WorkPageDesktop"><img
+                              alt="The Getaway"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/22E6211F25B9FC26F2A5B5FB998446F73DF19B81.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Getaway</div>
+                              <div class="BookSlide-Author">Jeff Kinney</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/redwall-by-brian-jacques/248568/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book16WorkPageDesktop"><img alt="Redwall"
+                                                                                                           data-src="https://img.thriftbooks.com/api/images/s/29e8e2d2a29095fc6553233e8cfdf7aec1b584e1.jpg"
+                                                                                                           class="lazyload">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Redwall</div>
+                              <div class="BookSlide-Author">Brian Jacques</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-communist-manifesto-by-karl-marx-friedrich-engels/255628/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book17WorkPageDesktop"><img
+                              alt="Manifest der Kommunistischen Partei"
+                              data-src="https://img.thriftbooks.com/api/images/s/878f8175d1aa70059db68a01d2fb25aa1bb983ca.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Manifest der Kommunistischen Partei</div>
+                              <div class="BookSlide-Author">Karl Marx</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$4.19</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container" href="/w/miss-rumphius-by-barbara-cooney/253948/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book18WorkPageDesktop"><img
+                              alt="Miss Rumphius"
+                              data-src="https://img.thriftbooks.com/api/images/s/4c633f7b386cf0e945201d42619151f102374161.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Miss Rumphius</div>
+                              <div class="BookSlide-Author">Barbara Cooney</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/persepolis-the-story-of-a-childhood_marjane-satrapi/245748/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book19WorkPageDesktop"><img
+                              alt="Persepolis"
+                              data-src="https://img.thriftbooks.com/api/images/s/2540127da455500c49d0c50c71683b6f38f0b70b.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Persepolis</div>
+                              <div class="BookSlide-Author">Marjane Satrapi</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-tale-of-despereaux-by-kate-dicamillo/248748/" aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book20WorkPageDesktop"><img
+                              alt="The Tale of Despereaux"
+                              data-src="https://img.thriftbooks.com/api/images/s/c8c754660304b6eff8ef4a85a8a5b2c80749732c.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The Tale of Despereaux</div>
+                              <div class="BookSlide-Author">Kate DiCamillo</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/who-moved-my-cheese-an-a-mazing-way-to-deal-with-change-in-your-work-and-in-your-life_spencer-johnson/251648/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book21WorkPageDesktop"><img
+                              alt="Who Moved My Cheese?"
+                              data-src="https://img.thriftbooks.com/api/images/s/6e8927f8783497e75fada1548f7306a472bab9c4.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Who Moved My Cheese?</div>
+                              <div class="BookSlide-Author">Spencer Johnson</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$4.19</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/the-true-story-of-the-three-little-pigs-by-jon-scieszka-lane-smith/251068/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book22WorkPageDesktop"><img
+                              alt="The True Story of the Three Little Pigs"
+                              data-src="https://img.thriftbooks.com/api/images/s/3d932c9bc6d87dd0243fa964fd7f95c44f1d2e79.jpg"
+                              class="lazyload"></div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">The True Story of the Three Little Pigs</div>
+                              <div class="BookSlide-Author">Jon Scieszka</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$3.99</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+                    <div
+                      style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 312px; transform: translateX(0px);"></div>
+                  </div>
+                  <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+                    <div
+                      style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 0px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="WorkTags">
+          <div class="u-horizontalDivider"></div>
+          <p>Related Subjects</p>
+          <span class="WorkTag">
+                <a href="/browse/#b.pt=1&amp;b.f.t[]=12637" rel="'nofollow'">Computers</a>
+            </span>
+          <span class="WorkTag">
+                <a href="/b/computers-and-technology/">Computers &amp; Technology</a>
+            </span>
+        </div>
+      
+      </div>
+      <div class="WorkWidget-container">
+        <div class="WorkWidget-content Content">
+          <div class="WorkWidget-rightSide is-fullWidth">
+            <div class="WorkWidget-title">More by Iuliana Cosmina</div>
+            <div class="BookSlider-green BookSlider-condensed">
+              <div class="BookSliderNav has-next has-prev RecSection-desktop" id="recSection0">
+                <div class="RecSection-Header"></div>
+                <div>
+                  <div class="BookSlider-nav BookSlider-prev u-fade u-hidden">
+                    <div class="BookSlider-navCircle">
+                      <svg icon="chevron-left" aria-hidden="true" class="Icon">
+                        <use data-classes="" xlink:href="#Icon--chevron-left"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="BookSlider-nav BookSlider-next u-fade u-hidden">
+                    <div class="BookSlider-navCircle">
+                      <svg icon="chevron-right" aria-hidden="true" class="Icon">
+                        <use data-classes="" xlink:href="#Icon--chevron-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div style="position: relative; overflow: hidden; width: auto; height: calc(8rem + 182px);">
+                  <div
+                    style="position: absolute; inset: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;"
+                    class="dragscroll">
+                    <div>
+                      <div class="BookSliderDesktop" id="bookSliderWorkWidgetDesktop0">
+                        <div class="BookSlider-MobileWrapper" id="wrapper0WorkWidgetDesktop" style="width: 510px;"><a
+                          class="BookSlideDesktop-Container"
+                          href="/w/pivotal-certified-professional-core-spring-5-developer-exam-a-study-guide-using-spring-framework-5_iuliana-cosmina/22340213/"
+                          aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book0WorkWidgetDesktop"><img
+                              alt="Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5"
+                              data-src="https://img.thriftbooks.com/api/images/i/s/C03CF49EEFAD4E769C67D35577E0E15945A528AC.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/i/s/C03CF49EEFAD4E769C67D35577E0E15945A528AC.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Pivotal Certified Professional Core Spring 5 Developer Exam:
+                                A Study Guide Using Spring Framework 5
+                              </div>
+                              <div class="BookSlide-Author">Iuliana Cosmina</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$57.96</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/java-for-absolute-beginners-learn-to-program-the-fundamentals-the-java-9-way_iuliana-cosmina/19880808/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book1WorkWidgetDesktop"><img
+                              alt="Java for Absolute Beginners: Learn to Program the Fundamentals the Java 9+ Way"
+                              data-src="https://img.thriftbooks.com/api/images/s/a981327cc72368e94d1b34da9659c0935bc3dc52.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/s/a981327cc72368e94d1b34da9659c0935bc3dc52.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Java for Absolute Beginners: Learn to Program the
+                                Fundamentals the Java 9+ Way
+                              </div>
+                              <div class="BookSlide-Author">Iuliana Cosmina</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$29.68</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a><a class="BookSlideDesktop-Container"
+                               href="/w/pivotal-certified-spring-web-application-developer-exam-a-study-guide_iuliana-cosmina/14256199/"
+                               aria-current="false">
+                          <div class="BookSlideDesktop">
+                            <div class="BookSlideDesktop-Image" id="slide-rec0-book2WorkWidgetDesktop"><img
+                              alt="Pivotal Certified Spring Web Application Developer Exam: A Study Guide"
+                              data-src="https://img.thriftbooks.com/api/images/s/325ffb70254b2c2228d43ed376fe11d1fc7b5a3a.jpg"
+                              class=""
+                              src="https://img.thriftbooks.com/api/images/s/325ffb70254b2c2228d43ed376fe11d1fc7b5a3a.jpg">
+                            </div>
+                            <div class="BookSlide-Content">
+                              <div class="BookSlide-Title">Pivotal Certified Spring Web Application Developer Exam: A
+                                Study Guide
+                              </div>
+                              <div class="BookSlide-Author">Iuliana Cosmina</div>
+                              <div class="BookSlide-Price"><p class="BookSlider-price"><strong>Out of Stock</strong></p>
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+                    <div
+                      style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;"></div>
+                  </div>
+                  <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+                    <div
+                      style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 0px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Content">
+        
+        <div class="WorkReviews-container" id="WorkCustomerReviews">
+          <div>
+            <div class="WorkReviews-header">
+              <div class="WorkReviews-item">
+                <div class="WorkReviews-title"><h2>Customer Reviews</h2>
+                  <div class="WorkReviews-mobileLink"><small></small></div>
+                </div>
+                <div class="WorkReviews-overallScore" tabindex="0">
+                  <div class="WorkReviews-ratingContainer">
+                    <div class="WorkMeta-rating WorkMeta-rating-flex" tabindex="0" aria-label="Rated 0.00 stars"><span
+                      class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
+                      class="WorkMeta-ratingStar" src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                      alt="Empty Star" aria-hidden="true"></span><span class="WorkMeta-ratingStar"
+                                                                       title="Log in to rate this book"
+                                                                       style="cursor: default;"><img
+                      class="WorkMeta-ratingStar" src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                      alt="Empty Star" aria-hidden="true"></span><span class="WorkMeta-ratingStar"
+                                                                       title="Log in to rate this book"
+                                                                       style="cursor: default;"><img
+                      class="WorkMeta-ratingStar" src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                      alt="Empty Star" aria-hidden="true"></span><span class="WorkMeta-ratingStar"
+                                                                       title="Log in to rate this book"
+                                                                       style="cursor: default;"><img
+                      class="WorkMeta-ratingStar" src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                      alt="Empty Star" aria-hidden="true"></span><span class="WorkMeta-ratingStar"
+                                                                       title="Log in to rate this book"
+                                                                       style="cursor: default;"><img
+                      class="WorkMeta-ratingStar" src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                      alt="Empty Star" aria-hidden="true"></span></div>
+                  </div>
+                  <div class="WorkReviews-numReviews"><small>0 customer rating | 0 review</small></div>
+                </div>
+              </div>
+              <div class="WorkReviews-writeButtonContainer"><a class="Button WorkReviews-writeButton"
+                                                               href="/w/pro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina/17430041/review/"
+                                                               rel="nofollow">Write a Review</a></div>
+            </div>
+            <div class="WorkReviews-noReviewsPlaceholder">There are currently no reviews. <a
+              href="/w/pro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina/17430041/review/">Be
+              the first to review this work</a>.
+            </div>
+          </div>
+        </div>
+        
+        <div class="u-horizontalDivider"></div>
+      
+      </div>
+      <div id="BookSlider-recentlyViewed" class="Content BookSlider-recentlyViewed">
+        <div>
+          <div class="BookSlider-green BookSlider-condensed">
+            <div class="BookSliderNav has-next has-prev RecSection-desktop" id="recSection0">
+              <div class="RecSection-Header"><h2 class="RecSection-title">Recently Viewed and Featured</h2></div>
+              <div>
+                <div class="BookSlider-nav BookSlider-prev u-fade u-hidden">
+                  <div class="BookSlider-navCircle">
+                    <svg icon="chevron-left" aria-hidden="true" class="Icon">
+                      <use data-classes="" xlink:href="#Icon--chevron-left"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="BookSlider-nav BookSlider-next u-fade u-hidden">
+                  <div class="BookSlider-navCircle">
+                    <svg icon="chevron-right" aria-hidden="true" class="Icon">
+                      <use data-classes="" xlink:href="#Icon--chevron-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div style="position: relative; overflow: hidden; width: auto; height: calc(8rem + 182px);">
+                <div
+                  style="position: absolute; inset: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;"
+                  class="dragscroll">
+                  <div>
+                    <div class="BookSliderDesktop" id="bookSliderWorkPageRecentlyViewed0">
+                      <div class="BookSlider-MobileWrapper" id="wrapper0WorkPageRecentlyViewed" style="width: 510px;"><a
+                        class="BookSlideDesktop-Container"
+                        href="/w/pro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina/17430041/"
+                        aria-current="false">
+                        <div class="BookSlideDesktop">
+                          <div class="BookSlideDesktop-Image" id="slide-rec0-book0WorkPageRecentlyViewed"><img
+                            alt="Pro Spring 5: An In-Depth Guide to the Spring Framework and Its Tools"
+                            src="https://img.thriftbooks.com/api/images/s/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg"
+                            class="lazyload"></div>
+                          <div class="BookSlide-Content">
+                            <div class="BookSlide-Title">Pro Spring 5: An In-Depth Guide to the Spring Framework and Its
+                              Tools
+                            </div>
+                            <div class="BookSlide-Author">Iuliana Cosmina</div>
+                            <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$41.07</strong></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a><a class="BookSlideDesktop-Container"
+                             href="/w/pivotal-certified-professional-core-spring-5-developer-exam-a-study-guide-using-spring-framework-5_iuliana-cosmina/22340213/"
+                             aria-current="false">
+                        <div class="BookSlideDesktop">
+                          <div class="BookSlideDesktop-Image" id="slide-rec0-book1WorkPageRecentlyViewed"><img
+                            alt="Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5"
+                            src="https://img.thriftbooks.com/api/images/i/s/C03CF49EEFAD4E769C67D35577E0E15945A528AC.jpg"
+                            class="lazyload"></div>
+                          <div class="BookSlide-Content">
+                            <div class="BookSlide-Title">Pivotal Certified Professional Core Spring 5 Developer Exam: A
+                              Study Guide Using Spring Framework 5
+                            </div>
+                            <div class="BookSlide-Author">Iuliana Cosmina</div>
+                            <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$57.96</strong></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a><a class="BookSlideDesktop-Container"
+                             href="/w/java-for-absolute-beginners-learn-to-program-the-fundamentals-the-java-9-way_iuliana-cosmina/19880808/"
+                             aria-current="false">
+                        <div class="BookSlideDesktop">
+                          <div class="BookSlideDesktop-Image" id="slide-rec0-book2WorkPageRecentlyViewed"><img
+                            alt="Java for Absolute Beginners: Learn to Program the Fundamentals the Java 9+ Way"
+                            src="https://img.thriftbooks.com/api/images/s/a981327cc72368e94d1b34da9659c0935bc3dc52.jpg"
+                            class="lazyload"></div>
+                          <div class="BookSlide-Content">
+                            <div class="BookSlide-Title">Java for Absolute Beginners: Learn to Program the Fundamentals
+                              the Java 9+ Way
+                            </div>
+                            <div class="BookSlide-Author">Iuliana Cosmina</div>
+                            <div class="BookSlide-Price"><p class="BookSlider-price">from: <strong>$29.68</strong></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+                  <div
+                    style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;"></div>
+                </div>
+                <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+                  <div
+                    style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 0px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="FooterContainer">
@@ -329,6 +1176,22 @@
   
   </div>
 </div>
+<script type="text/javascript">
 
+    function checkSubmit(e) {
+        if (e && e.keyCode === 13) {
+            getInputValue();
+        }
+    }
+
+    function getInputValue() {
+        let inputVal = document.getElementById("search-input-id").value.toLowerCase();
+        if (inputVal === "spring in action") {
+            window.location.href = "springsearch.html"
+        } else if (inputVal === "pro spring 5") {
+            window.location.href = "prospringsearch.html"
+        }
+    }
+</script>
 </body>
 </html>
