@@ -20,16 +20,31 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-          crossorigin="anonymous"></script>
-  
   <link rel="stylesheet" href="style/versioned/bid-49376/works.css">
   
   <meta name="description"
         content="Over 13 million titles available from the largest seller of used books. Cheap prices on high quality gently used books. Free shipping over $10."/>
+  
+  <style>
+      #toc_container {
+          background: #f9f9f9 none repeat scroll 0 0;
+          border: 1px solid #aaa;
+          display: table;
+          font-size: 95%;
+          padding: 20px;
+          width: auto;
+          margin: 0 auto;
+      }
 
+      .toc_title {
+          font-weight: 700;
+          text-align: center;
+      }
+
+      #toc_container li, #toc_container ul, #toc_container ul li {
+          list-style: outside none none !important;
+      }
+  </style>
 
 </head>
 <body>
@@ -37,7 +52,6 @@
 <div class="FormOuterContainer">
   <div class="Container">
     <div id="GdprEyebrow"></div>
-    
     
     <div>
       <a href="#TBContent" class="SkipToContent" title="Skip to content" tabindex="0">Skip to content</a>
@@ -48,7 +62,6 @@
             <img alt="ThriftBooks" class="DesktopHeader-logo"
                  src="https://static.thriftbooks.com/images/tblogo-green_20200225.svg">
           </a>
-          
           <div class="SearchContainer SearchContainer--desktop" id="GlobalSearch">
             <div class="Search" onKeyPress="return checkSubmit(event)">
               <input type="text"
@@ -92,23 +105,20 @@
               </div>
             </div>
           </div>
-          
           <div class="Header-verticalBar"></div>
-          
           <a class="Header-button Header-wishlist" href="">
             <img alt="View your wishlist" class="Header-wishlistImage"
                  src="https://static.thriftbooks.com/site_images/wishlist-grey.svg">
           </a>
-          
           <div id="GlobalCartContainer" class="Header-button Header-cart">
-            <div class="GlobalCart-container"><a class="GlobalCart-button is-desktop Header-button Header-cart"
-                                                 href="">
-              <svg aria-hidden="true" class="Icon">
-                <use data-classes="" xlink:href="#Icon--cart"></use>
-              </svg>
-              <div class="GlobalCart-count is-singleDigit">0</div>
-              <div class="tb-hiddenText">books in your cart</div>
-            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
+            <div class="GlobalCart-container">
+              <a class="GlobalCart-button is-desktop Header-button Header-cart" href="">
+                <svg aria-hidden="true" class="Icon">
+                  <use data-classes="" xlink:href="#Icon--cart"></use>
+                </svg>
+                <div class="GlobalCart-count is-singleDigit">0</div>
+                <div class="tb-hiddenText">books in your cart</div>
+              </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
               <svg aria-hidden="true" class="Icon">
                 <svg id="Icon--cart" class="IconSymbol" viewBox="0 0 73.28 46.3">
                   <g data-name="Layer 2">
@@ -124,9 +134,7 @@
             </a></div>
           </div>
         </div>
-      
       </div>
-      
       
       <div class="Navigation" id="HeaderNavigation">
         <div class="SuperMenu Content" role="menubar">
@@ -266,7 +274,8 @@
                           <span>
                             <svg icon="genericShare" aria-label="Get sharable link to page" class="Icon">
                               <use data-classes="" xlink:href="#Icon--genericShare">
-                                <svg id="Icon--genericShare" class="IconSymbol" viewBox="0 0 96 96"><path d="M74 58c-3.656 0-7.152 1.116-10.192 3.252L39.964 48.104c.02-.252.036-.512.036-.764 0-.14-.004-.276-.012-.416L63.52 34.556C66.616 36.812 70.212 38 74 38c9.924 0 18-8.08 18-18S83.924 2 74 2c-9.92 0-18 8.08-18 18 0 .14.004.272.012.416L32.48 32.78c-3.096-2.252-6.692-3.44-10.48-3.44-9.924 0-18 8.076-18 18 0 9.916 8.076 18 18 18 3.656 0 7.152-1.112 10.192-3.252l23.844 13.148c-.02.252-.036.508-.036.764 0 9.92 8.08 18 18 18s18-8.08 18-18-8.08-18-18-18z"></path></svg>
+                                <svg id="Icon--genericShare" class="IconSymbol" viewBox="0 0 96 96"><path
+                                  d="M74 58c-3.656 0-7.152 1.116-10.192 3.252L39.964 48.104c.02-.252.036-.512.036-.764 0-.14-.004-.276-.012-.416L63.52 34.556C66.616 36.812 70.212 38 74 38c9.924 0 18-8.08 18-18S83.924 2 74 2c-9.92 0-18 8.08-18 18 0 .14.004.272.012.416L32.48 32.78c-3.096-2.252-6.692-3.44-10.48-3.44-9.924 0-18 8.076-18 18 0 9.916 8.076 18 18 18 3.656 0 7.152-1.112 10.192-3.252l23.844 13.148c-.02.252-.036.508-.036.764 0 9.92 8.08 18 18 18s18-8.08 18-18-8.08-18-18-18z"></path></svg>
                               </use>
                               </svg>
                           </span>
@@ -275,8 +284,14 @@
                     </div>
                     
                     <div class="WorkCoverSidebar-isbns">
-                      <div><p>ISBN: <span id="isbn" class="WorkSelector-bold">1617294942</span></p>
-                        <p>ISBN13: <span id="isbn13" class="WorkSelector-bold">9781617294945</span></p></div>
+                      <div>
+                        <p>ISBN: <span id="isbn" class="WorkSelector-bold">1617294942</span></p>
+                        <p>ISBN13: <span id="isbn13" class="WorkSelector-bold">9781617294945</span></p>
+                        <p>Publisher: <span id="publisher" class="WorkSelector-bold">Manning</span></p>
+                        <p>Length: <span id="length" class="WorkSelector-bold">520 Pages</span></p>
+                        <p>Weight: <span id="weight" class="WorkSelector-bold">2.26 lbs.</span></p>
+                        <p>Dimensions: <span id="dimensions" class="WorkSelector-bold">1.1" x 7.4" x 9.3"</span></p>
+                      </div>
                     </div>
                   </div>
                   <div class="WorkInterface AlternativeSelector">
@@ -446,39 +461,83 @@
               </div>
               <div class="WorkMeta-overview">
                 <div class="u-horizontalDivider"></div>
-                <div><h2 class="WorkMeta-overviewTitle">Book Overview</h2>
-                  <div>
-                    <p class="WorkMeta-overview"><span>Summary Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning...</span>
-                      <button class="is-link" title="" type="button">Read Full Overview</button>
-                    </p>
-                  </div>
-                </div>
                 <div>
-                  <div class="WorkMeta-details is-collapsable is-collapsed">
-                    <button class="WorkMeta-detailsCollapseButton is-link" title="" type="button">Product Details
-                      <svg icon="caret-down" aria-hidden="true" class="Icon">
-                        <use data-classes="" xlink:href="#Icon--caret-down"></use>
-                      </svg>
-                    </button>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Format:</span><span
-                      class="WorkMeta-detail">Paperback</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed is-important"><span
-                      class="WorkMeta-detail">Language:</span><span class="WorkMeta-detail">English</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">ISBN:</span><span
-                      class="WorkMeta-detail">1617294942</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">ISBN13:</span><span
-                      class="WorkMeta-detail">9781617294945</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span
-                      class="WorkMeta-detail">Release Date:</span><span class="WorkMeta-detail">November 2018</span>
+                  <h2 class="WorkMeta-overviewTitle">Book Overview</h2>
+                  <div>
+                    
+                    <p class="WorkMeta-overview">
+                      Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling
+                      Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on
+                      reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best
+                      practices, including Spring Boot for application setup and configuration. Purchase of the print
+                      book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the
+                      Technology Spring Framework makes life easier for Java developers. New features in Spring 5
+                      bring its productivity-focused approach to microservices, reactive development, and other modern
+                      application designs. With Spring Boot now fully integrated, you can start even complex projects
+                      with minimal configuration code. And the upgraded WebFlux framework supports reactive apps right
+                      out of the box About the Book Spring in Action, 5th Edition guides you through Spring's core
+                      features, explained in Craig Walls' famously clear style.
+                    </p>
+                    
+                    <p>
+                      You'll roll up your sleeves and build a secure
+                      database-backed web app step by step. Along the way, you'll explore reactive programming,
+                      microservices, service discovery, RESTful APIs, deployment, and expert best practices. Whether
+                      you're just discovering Spring or leveling up to Spring 5.0, this Manning classic is your ticket
+                      What's inside Building reactive applications Spring MVC for web apps and RESTful web services
+                      Securing applications with Spring Security Covers Spring 5.0 Over 100,000 copies sold About the
+                      Reader For intermediate Java developers. About the Author Craig Walls is a principal software
+                      engineer at Pivotal, a popular author, an enthusiastic supporter of Spring Framework, and a
+                      frequent conference speaker.
+                    </p>
+                    
+                    <div id="toc_container">
+                      <p id="toc_title_name" class="toc_title">Spring in Action 5th Edition</p>
+                      <p class="toc_title">TABLE OF CONTENTS</p>
+                      <ul class="toc_list">
+                        <li style="font-weight:700">PART 1 - FOUNDATIONAL SPRING
+                          <ul>
+                            <li style="font-weight:normal">1. Getting started with Spring</li>
+                            <li style="font-weight:normal">2. Developing web applications</li>
+                            <li style="font-weight:normal">3. Working with data</li>
+                            <li style="font-weight:normal">4. Securing Spring</li>
+                            <li style="font-weight:normal">5. Working with configuration properties</li>
+                          </ul>
+                        </li>
+                        <li style="font-weight:700">PART 2 - INTEGRATED SPRING
+                          <ul>
+                            <li style="font-weight:normal">6. Creating REST services</li>
+                            <li style="font-weight:normal">7. Consuming REST services</li>
+                            <li style="font-weight:normal">8. Sending messages asynchronously</li>
+                            <li style="font-weight:normal">9. Integrating Spring</li>
+                          </ul>
+                        </li>
+                        <li style="font-weight:700">PART 3 - REACTIVE SPRING
+                          <ul>
+                            <li style="font-weight:normal">10. Introducing Reactor</li>
+                            <li style="font-weight:normal">11. Developing reactive APIs</li>
+                            <li style="font-weight:normal">12. Persisting data reactively</li>
+                          </ul>
+                        </li>
+                        <li style="font-weight:700">PART 4 CLOUD-NATIVE SPRING
+                          <ul>
+                            <li style="font-weight:normal">13. Discovering services</li>
+                            <li style="font-weight:normal">14. Managing configuration</li>
+                            <li style="font-weight:normal">15. Handling failure and latency</li>
+                          </ul>
+                        </li>
+                        <li style="font-weight:700">PART 5 - DEPLOYED SPRING
+                          <ul>
+                            <li style="font-weight:normal">16. Working with Spring Boot Actuator</li>
+                            <li style="font-weight:normal">17. Administering Spring</li>
+                            <li style="font-weight:normal">18. Monitoring Spring with JMX</li>
+                            <li style="font-weight:normal">19. Deploying Spring</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    
                     </div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Publisher:</span><span
-                      class="WorkMeta-detail">Manning Publications Company</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Length:</span><span
-                      class="WorkMeta-detail">520 Pages</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Weight:</span><span
-                      class="WorkMeta-detail">2.26 lbs.</span></div>
-                    <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Dimensions:</span><span
-                      class="WorkMeta-detail">1.1" x 7.4" x 9.3"</span></div>
+                  
                   </div>
                 </div>
               </div>
@@ -1510,11 +1569,27 @@
       <div class="modal-body">
         <iframe id="frame" src="files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 type="application/pdf"
-                style="width:1100px; height:80vh" ></iframe>
+                style="width:1100px; height:80vh"></iframe>
       </div>
     </div>
   </div>
 </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
 
 <script type="text/javascript">
 
@@ -1564,6 +1639,10 @@
         let isbn = document.getElementById("isbn");
         let isbn13 = document.getElementById("isbn13");
         let frame = document.getElementById("frame");
+        let tocTitle = document.getElementById("toc_title_name");
+        let length = document.getElementById("length");
+        let weight = document.getElementById("weight");
+        let dimensions = document.getElementById("dimensions");
         switch (index) {
             case 1: // 5 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
@@ -1576,6 +1655,10 @@
                 isbn.innerText = "1617294942";
                 isbn13.innerText = "9781617294945";
                 frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 5th Edition";
+                length.innerText = "520 Pages";
+                weight.innerText = "2.26 lbs.";
+                dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
                 break;
             case 2: // 4 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/3919fde90857cd5a1deb16ac48ea2a04eb898ca5.jpg";
@@ -1588,6 +1671,10 @@
                 isbn.innerText = "161729120X";
                 isbn13.innerText = "9781617291203";
                 frame.src = "files/SpringInAction4TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 4th Edition";
+                length.innerText = "624 Pages";
+                weight.innerText = "2.35 lbs.";
+                dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
                 break;
             case 3: // 3 ed
                 imageElement.src = "images/SpringInAction3Cover.jpg";
@@ -1600,6 +1687,10 @@
                 isbn.innerText = "1935182358";
                 isbn13.innerText = "9781935182351";
                 frame.src = "files/SpringInAction3TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 3rd Edition";
+                length.innerText = "424 Pages";
+                weight.innerText = "1.60 lbs.";
+                dimensions.innerText = "0.8\" x 7.4\" x 9.3\"";
                 break;
             case 4: // 2 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/fbcc24d3d833762461246bd217194c1df9246087.jpg";
@@ -1612,6 +1703,10 @@
                 isbn.innerText = "1933988134";
                 isbn13.innerText = "9781933988139";
                 frame.src = "files/SpringInAction2TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 2nd Edition";
+                length.innerText = "650 Pages";
+                weight.innerText = "2.85 lbs.";
+                dimensions.innerText = "1.5\" x 7.4\" x 9.3\"";
                 break;
             case 5: // 1 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/15663828e4d32892b4187fb39671d18030123a2c.jpg";
@@ -1624,6 +1719,10 @@
                 isbn.innerText = "1932394354";
                 isbn13.innerText = "9781932394351";
                 frame.src = "files/SpringInAction1TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 1st Edition";
+                length.innerText = "444 Pages";
+                weight.innerText = "1.82 lbs.";
+                dimensions.innerText = "0.9\" x 7.4\" x 9.3\"";
                 break;
             default:
                 imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
@@ -1633,9 +1732,13 @@
                 bigPrice.innerText = "44.27";
                 qtyAvailable.innerText = "50 Available";
                 save.innerText = "Save $5.72 !";
-                isbn.innerText = "";
+                isbn.innerText = "1617294942";
                 isbn13.innerText = "9781617294945";
                 frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
+                tocTitle.innerText = "Spring in Action 5th Edition";
+                length.innerText = "520 Pages";
+                weight.innerText = "2.26 lbs.";
+                dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
         }
     }
 
@@ -1653,6 +1756,14 @@
             window.location.href = "prospringsearch.html"
         }
     }
+
+    $('#collapseExample').on('show.bs.collapse', function () {
+        document.getElementById("overview").innerText = "Show Less";
+    })
+
+    $('#collapseExample').on('hide.bs.collapse', function () {
+        document.getElementById("overview").innerText = "Read Full Overview";
+    })
 </script>
 </body>
 </html>
