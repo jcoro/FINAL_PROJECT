@@ -15,20 +15,42 @@
   <meta name="distribution" content="Global"/>
   
   <link rel="icon" href="https://static.thriftbooks.com/images/favicon.ico" type="image/x-icon"/>
-  <link rel="stylesheet" href="style/versioned/bid-49376/mainmvc.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="style/versioned/bid-49376/works.css">
   
   <meta name="description"
         content="Over 13 million titles available from the largest seller of used books. Cheap prices on high quality gently used books. Free shipping over $10."/>
+  
+  <style>
+      #toc_container {
+          background: #f9f9f9 none repeat scroll 0 0;
+          border: 1px solid #aaa;
+          display: table;
+          font-size: 95%;
+          padding: 20px;
+          width: auto;
+          margin: 0 auto;
+      }
 
+      .toc_title {
+          font-weight: 700;
+          text-align: center;
+      }
 
+      #toc_container li, #toc_container ul, #toc_container ul li {
+          list-style: outside none none !important;
+      }
+  </style>
 </head>
 <body>
 
 <div class="FormOuterContainer">
   <div class="Container">
     <div id="GdprEyebrow"></div>
-  
-  
+    
     <div>
       <a href="#TBContent" class="SkipToContent" title="Skip to content" tabindex="0">Skip to content</a>
       <div class="SuperHeader" id="SuperHeader"></div>
@@ -38,7 +60,6 @@
             <img alt="ThriftBooks" class="DesktopHeader-logo"
                  src="https://static.thriftbooks.com/images/tblogo-green_20200225.svg">
           </a>
-        
           <div class="SearchContainer SearchContainer--desktop" id="GlobalSearch">
             <div class="Search" onKeyPress="return checkSubmit(event)">
               <input type="text"
@@ -82,23 +103,20 @@
               </div>
             </div>
           </div>
-        
           <div class="Header-verticalBar"></div>
-        
           <a class="Header-button Header-wishlist" href="">
             <img alt="View your wishlist" class="Header-wishlistImage"
                  src="https://static.thriftbooks.com/site_images/wishlist-grey.svg">
           </a>
-        
           <div id="GlobalCartContainer" class="Header-button Header-cart">
-            <div class="GlobalCart-container"><a class="GlobalCart-button is-desktop Header-button Header-cart"
-                                                 href="">
-              <svg aria-hidden="true" class="Icon">
-                <use data-classes="" xlink:href="#Icon--cart"></use>
-              </svg>
-              <div class="GlobalCart-count is-singleDigit">0</div>
-              <div class="tb-hiddenText">books in your cart</div>
-            </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
+            <div class="GlobalCart-container">
+              <a class="GlobalCart-button is-desktop Header-button Header-cart" href="">
+                <svg aria-hidden="true" class="Icon">
+                  <use data-classes="" xlink:href="#Icon--cart"></use>
+                </svg>
+                <div class="GlobalCart-count is-singleDigit">0</div>
+                <div class="tb-hiddenText">books in your cart</div>
+              </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
               <svg aria-hidden="true" class="Icon">
                 <svg id="Icon--cart" class="IconSymbol" viewBox="0 0 73.28 46.3">
                   <g data-name="Layer 2">
@@ -114,10 +132,8 @@
             </a></div>
           </div>
         </div>
-    
       </div>
-    
-    
+      
       <div class="Navigation" id="HeaderNavigation">
         <div class="SuperMenu Content" role="menubar">
           <div class="SuperMenu" role="menubar">
@@ -127,14 +143,14 @@
                   <use data-classes="" xlink:href="#Icon--chevron-down"></use>
                 </svg>
               </span>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Books
               <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">
               Collectible Books
@@ -142,7 +158,7 @@
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Movies
               &amp; TV
@@ -150,175 +166,225 @@
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Music
               <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link" href="" role="menuitem">Video Games
               <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--chevron-down"></use>
               </svg>
             </a>
-          
+            
             </div>
             <div class="SuperMenuItem"><a class="SuperMenuItem-link MenuLink" href="" role="menuitem">Blog</a>
             </div>
           </div>
         </div>
       </div>
-    
+      
       <div id="CartEyebrowContainer"></div>
       <div id="TBContent"></div>
     </div>
     
     <div class="NonHeaderContentWrapper">
+      <div class="Mobile-noPadding-content Content">
+        <a href="https://www.thriftbooks.com/b/thriftbooks-deals/" class="MarketingBanner"
+           style="background-color: #442783; color: #FFFFFF">
+        <span class="MarketingBanner-Message">
+            ReadingRewards: Earn 2x points<br>on ThriftBooks Deals
+        </span>
+        </a>
+      </div>
       <div class="Content">
-        
+        <div class="WorkBreadcrumbs-container">
+          <div class="WorkBreadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"> <a
+              href="/b/computers-and-technology/" itemprop="item"><span
+              itemprop="name">Computers &amp; Technology Books</span></a><meta itemprop="position" content="1"></span>
+            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span
+              class="WorkBreadcrumbs-separator">&gt;</span> <a href="/b/programming-language/" itemprop="item"><span
+              itemprop="name">Programming Language Books</span></a><meta itemprop="position" content="2"></span>
+          </div>
+        </div>
         
         <div id="Work-desktop">
-          
-          
           <h3 class="Work-backToSearch" id="work-back-to-search"><a href="javascript:;">&lt; Back to Search Results</a>
           </h3>
-          <script>
-              const initialHistoryLength = history.length - 1;
-              const backToSearchLink = document.getElementById('work-back-to-search');
-
-              if (!backToSearchLink) {
-                  console.error("Cannot find an element with id of 'work-back-to-search'");
-              } else {
-                  backToSearchLink.addEventListener('click', function () {
-                      history.go(initialHistoryLength - window.history.length);
-                  });
-              }
-          </script>
-          
-          <div id="react_Y9HcloGeAUOsujJuYpOQ">
+          <div>
             <div>
-              <div itemscope="" itemtype="http://schema.org/Book">
+              <div itemscope="" itemtype="">
                 <div class="WorkContainer WorkSelector-moreMargin">
                   <div class="WorkCoverSidebar">
-                    <div class="WorkCover"><img itemprop="image"
-                                                src="https://img.thriftbooks.com/api/images/m/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg"
-                                                alt="Paperback Pro Spring 5 : An in-Depth Guide to the Spring Framework and Its Tools Book">
+                    <div style="font-size:12px; color:#7b7b7b">Click Cover to Look Inside</div>
+                    <div class="WorkCover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img itemprop="image"
+                           src="https://img.thriftbooks.com/api/images/m/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg"
+                           alt="Paperback Pro Spring 5 : An in-Depth Guide to the Spring Framework and Its Tools Book">
                     </div>
                     <div class="WorkMeta-shares">
-                      <div class="SocialShareContainer"><a class="SocialShare"
-                                                           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073"
-                                                           target="_blank"><span
-                        class="SocialShareButton st_facebook_custom"><div class="tb-hiddenText">Share to Facebook</div><svg
-                        icon="social-f" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                             xlink:href="#Icon--social-f"></use></svg></span></a><a
-                        class="SocialShare"
-                        href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073&amp;media=https://img.thriftbooks.com/api/images/m/039b699d7a40c5bf7d84b51ea13f9d52d848ef8b.jpg&amp;description=Master Spring basics and core topics, and share the authors' insights and real-world experiences with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework to build the various tiers and parts of an enterprise Java application: transactions, web and presentation tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and techniques covered in Pro Spring 5 and see how they work together. This book upd..."
-                        target="_blank"><span class="SocialShareButton st_pinterest_custom"><div class="tb-hiddenText">Share to Pinterest</div><svg
-                        icon="social-pinterest" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                                     xlink:href="#Icon--social-pinterest"></use></svg></span></a><a
-                        class="SocialShare"
-                        href="http://twitter.com/share?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fpro-spring-5-an-in-depth-guide-to-the-spring-framework-and-its-tools_iuliana-cosmina%2F17430041%2F%23isbn%3D1484228073"
-                        target="_blank"><span class="SocialShareButton st_twitter_custom"><div class="tb-hiddenText">Share to Twitter</div><svg
-                        icon="social-twitter" aria-hidden="true" class="Icon"><use data-classes=""
-                                                                                   xlink:href="#Icon--social-twitter"></use></svg></span></a><span
-                        class="SocialShare SocialShareButton st_generic_custom" tabindex="0"><span><svg
-                        icon="genericShare" aria-label="Get sharable link to page" class="Icon"><use data-classes=""
-                                                                                                     xlink:href="#Icon--genericShare"></use></svg></span></span>
+                      <div class="SocialShareContainer">
+                        <a class="SocialShare"
+                           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
+                           target="_blank">
+                          <span class="SocialShareButton st_facebook_custom">
+                            <div class="tb-hiddenText">Share to Facebook</div>
+                            <svg icon="social-f" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-f">
+                                <svg id="Icon--social-f" class="IconSymbol" viewBox="0 0 1792 1792"><path
+                                  d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z"></path></svg>
+                              </use>
+                            </svg>
+                          </span>
+                        </a>
+                        <a class="SocialShare"
+                           href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942&amp;media=https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg&amp;description=Summary Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Spring F..."
+                           target="_blank">
+                          <span class="SocialShareButton st_pinterest_custom">
+                            <div class="tb-hiddenText">Share to Pinterest</div>
+                            <svg icon="social-pinterest" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-pinterest"></use>
+                            </svg>
+                          </span>
+                        </a>
+                        <a class="SocialShare"
+                           href="http://twitter.com/share?url=https%3A%2F%2Fwww.thriftbooks.com%2Fw%2Fspring-in-action_craig-walls%2F310886%2F%23isbn%3D1617294942"
+                           target="_blank">
+                          <span class="SocialShareButton st_twitter_custom">
+                            <div class="tb-hiddenText">Share to Twitter</div>
+                            <svg icon="social-twitter" aria-hidden="true" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--social-twitter"></use>
+                            </svg>
+                          </span>
+                        </a>
+                        <span class="SocialShare SocialShareButton st_generic_custom" tabindex="0">
+                          <span>
+                            <svg icon="genericShare" aria-label="Get sharable link to page" class="Icon">
+                              <use data-classes="" xlink:href="#Icon--genericShare">
+                                <svg id="Icon--genericShare" class="IconSymbol" viewBox="0 0 96 96"><path
+                                  d="M74 58c-3.656 0-7.152 1.116-10.192 3.252L39.964 48.104c.02-.252.036-.512.036-.764 0-.14-.004-.276-.012-.416L63.52 34.556C66.616 36.812 70.212 38 74 38c9.924 0 18-8.08 18-18S83.924 2 74 2c-9.92 0-18 8.08-18 18 0 .14.004.272.012.416L32.48 32.78c-3.096-2.252-6.692-3.44-10.48-3.44-9.924 0-18 8.076-18 18 0 9.916 8.076 18 18 18 3.656 0 7.152-1.112 10.192-3.252l23.844 13.148c-.02.252-.036.508-.036.764 0 9.92 8.08 18 18 18s18-8.08 18-18-8.08-18-18-18z"></path></svg>
+                              </use>
+                              </svg>
+                          </span>
+                        </span>
                       </div>
                     </div>
                     <div class="WorkCoverSidebar-isbns">
-                      <div><p>ISBN: <span class="WorkSelector-bold">1484228073</span></p>
-                        <p>ISBN13: <span class="WorkSelector-bold">9781484228074</span></p></div>
+                      <div>
+                        <p>ISBN: <span id="isbn" class="WorkSelector-bold">1484228073</span></p>
+                        <p>ISBN13: <span id="isbn13" class="WorkSelector-bold">9781484228074</span></p>
+                        <p>Publisher: <span id="publisher" class="WorkSelector-bold">APress</span></p>
+                        <p>Length: <span id="length" class="WorkSelector-bold">849 Pages</span></p>
+                        <p>Weight: <span id="weight" class="WorkSelector-bold">3.64 lbs.</span></p>
+                        <p>Dimensions: <span id="dimensions" class="WorkSelector-bold">10.0" x 7.0" x 10.0"</span></p>
+                      </div>
                     </div>
                   </div>
                   <div class="WorkInterface AlternativeSelector">
-                    <div><h1 class="WorkMeta-title Alternative Alternative-title" itemprop="name">Pro Spring 5 : An
-                      in-Depth Guide to the Spring Framework and Its Tools</h1>
+                    <div>
+                      <h1 class="WorkMeta-title Alternative Alternative-title" itemprop="name">
+                        Pro Spring 5 : An in-Depth Guide to the Spring Framework and Its Tools
+                      </h1>
                       <div class="WorkMeta-byline Alternative Alternative-byline">
-                        <div class="WorkMeta-authors">by <a href="/a/iuliana-cosmina/2886058/" itemprop="author">Iuliana
-                          Cosmina</a></div>
+                        <div class="WorkMeta-authors">by
+                          <a href="" itemprop="author">
+                            Iuliana Cosmina
+                          </a>
+                        </div>
                         <div class="WorkMeta-ratingContainer">
-                          <div class="WorkMeta-rating WorkMeta-rating-flex" itemprop="aggregateRating" itemscope=""
-                               itemtype="http://schema.org/AggregateRating" tabindex="0" aria-label="Rated 0.00 stars">
+                          <div class="WorkMeta-rating WorkMeta-rating-flex"
+                               itemprop="aggregateRating"
+                               itemscope=""
+                               itemtype="http://schema.org/AggregateRating"
+                               tabindex="0" aria-label="Rated 0.00 stars">
                             <meta content="0.00" itemprop="ratingValue">
                             <meta content="0" itemprop="reviewCount">
-                            <span class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
+                            <span class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;">
+                              <img
+                                class="WorkMeta-ratingStar"
+                                src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
+                                aria-hidden="true">
+                            </span>
+                            <span class="WorkMeta-ratingStar"
+                                  title="Log in to rate this book" style="cursor: default;"><img
                               class="WorkMeta-ratingStar"
                               src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
-                              aria-hidden="true"></span><span class="WorkMeta-ratingStar"
-                                                              title="Log in to rate this book" style="cursor: default;"><img
-                            class="WorkMeta-ratingStar"
-                            src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
-                            aria-hidden="true"></span><span class="WorkMeta-ratingStar" title="Log in to rate this book"
-                                                            style="cursor: default;"><img class="WorkMeta-ratingStar"
-                                                                                          src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
-                                                                                          alt="Empty Star"
-                                                                                          aria-hidden="true"></span><span
-                            class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
-                            class="WorkMeta-ratingStar"
-                            src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
-                            aria-hidden="true"></span><span class="WorkMeta-ratingStar" title="Log in to rate this book"
-                                                            style="cursor: default;"><img class="WorkMeta-ratingStar"
-                                                                                          src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
-                                                                                          alt="Empty Star"
-                                                                                          aria-hidden="true"></span>
+                              aria-hidden="true">
+                            </span>
+                            <span class="WorkMeta-ratingStar"
+                                  title="Log in to rate this book"
+                                  style="cursor: default;">
+                              <img class="WorkMeta-ratingStar"
+                                   src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                                   alt="Empty Star"
+                                   aria-hidden="true">
+                            </span>
+                            <span
+                              class="WorkMeta-ratingStar" title="Log in to rate this book" style="cursor: default;"><img
+                              class="WorkMeta-ratingStar"
+                              src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png" alt="Empty Star"
+                              aria-hidden="true">
+                            </span>
+                            <span class="WorkMeta-ratingStar"
+                                  title="Log in to rate this book"
+                                  style="cursor: default;">
+                              <img class="WorkMeta-ratingStar"
+                                   src="https://static.thriftbooks.com/site_images/white-35_f758ee51.png"
+                                   alt="Empty Star"
+                                   aria-hidden="true">
+                            </span>
                           </div>
                           <span class="WorkMeta-noReviews">No Customer Reviews</span></div>
+                      </div>
+                    </div>
+  
+                    <div class="WorkSelector-container">
+                      <div class="WorkSelector-item large"><h2>Select Format</h2>
+                        <div class="WorkSelector-rowContainer">
+                          <div class="WorkSelector-row WorkSelector-td-height">
+                            <button class="NewButton WorkSelector-button is-selected" title="" type="button"
+                                    aria-selected="true" aria-current="false">
+                              <div class="WorkSelector-bold">Paperback</div>
+                              <div class=""><span>$41.07</span></div>
+                              <div class="tb-hiddenText">Paperback $41.07</div>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="WorkSelector-conditionHeader">
+                          <h2>Select Edition</h2>
+                        </div>
+                        <div class="WorkSelector-rowContainer">
+                          <div class="WorkSelector-row WorkSelector-td-height">
+                            <button class="NewButton WorkSelector-button is-selected is-compact"
+                                    title="" type="button"
+                                    aria-selected="false"
+                                    aria-current="false">
+                              <div class="WorkSelector-bold">5th Edition</div>
+                              <div class=""><span class="WorkSelector-bold">Date: </span>2017</div>
+                              <div class="WorkSelector-bold">New</div>
+                              <div class="price WorkSelector-bold WorkSelector-red"><span>$41.07</span></div>
+                            </button>
+                            
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="WorkMeta-overview-noSelector">
                       <div>
                         <div>
-                          <p class="WorkMeta-overview"><span>Master Spring basics and core topics, and share the authors' insights and real-world experiences with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework to build the various tiers and parts of an enterprise Java application: transactions, web and presentation tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and techniques covered in Pro Spring 5...</span>
-                            <button class="is-link" title="" type="button">Read Full Overview</button>
+                          <p class="WorkMeta-overview">
                           </p>
                         </div>
                       </div>
-                      <div>
-                        <div class="WorkMeta-details is-collapsable is-collapsed">
-                          <button class="WorkMeta-detailsCollapseButton is-link" title="" type="button">Product Details
-                            <svg icon="caret-down" aria-hidden="true" class="Icon">
-                              <use data-classes="" xlink:href="#Icon--caret-down"></use>
-                            </svg>
-                          </button>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span
-                            class="WorkMeta-detail">Format:</span><span class="WorkMeta-detail">Paperback</span></div>
-                          <div class="WorkMeta-detailsRow is-collapsed is-important"><span class="WorkMeta-detail">Language:</span><span
-                            class="WorkMeta-detail">English</span></div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">ISBN:</span><span
-                            class="WorkMeta-detail">1484228073</span></div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span
-                            class="WorkMeta-detail">ISBN13:</span><span class="WorkMeta-detail">9781484228074</span>
-                          </div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span
-                            class="WorkMeta-detail">Release Date:</span><span
-                            class="WorkMeta-detail">October 2017</span></div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span
-                            class="WorkMeta-detail">Publisher:</span><span class="WorkMeta-detail">Apress L. P.</span>
-                          </div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span
-                            class="WorkMeta-detail">Weight:</span><span class="WorkMeta-detail">3.64 lbs.</span></div>
-                          <div class="WorkMeta-detailsRow is-collapsed"><span class="WorkMeta-detail">Dimensions:</span><span
-                            class="WorkMeta-detail">10.0" x 7.0" x 10.0"</span></div>
-                        </div>
-                      </div>
+                      
                     </div>
-                    <div class="WorkSelector-row">
-                      <div class="AdditionalFormat-button Button-container" title="">
-                        <button class="Button" type="button">
-                          <svg class="Icon Icon-lrg" icon="all-editions" aria-hidden="true">
-                            <use data-classes="Icon-lrg" xlink:href="#Icon--all-editions"></use>
-                          </svg>
-                          <span class="AdditionalFormat-text WorkSelector-bold">See 1 Edition from $41.07</span>
-                          <svg class="Icon AdditionalFormat-chevron" icon="chevron-right" aria-hidden="true">
-                            <use data-classes="AdditionalFormat-chevron" xlink:href="#Icon--chevron-right"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
+                    
+                    
                   </div>
                   <div class="WorkCoverSidebar WorkPriceSidebar">
                     <div class="WorkSelector-sidebar"><h2>Selected</h2>
@@ -375,7 +441,269 @@
         <div class="WorkRecommendations">
           <div>
             <div class="u-horizontalDivider"></div>
-            <div class="BookSlider-green BookSlider-condensed">
+            <div>
+              <h2 class="WorkMeta-overviewTitle">Book Overview</h2>
+              <div>
+    
+                <p class="WorkMeta-overview">
+                  Master Spring basics and core topics, and share the authors' insights and real-world experiences
+                  with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework
+                  to build the various tiers and parts of an enterprise Java application: transactions, web and presentation
+                  tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and
+                  techniques covered in Pro Spring 5.
+                </p>
+    
+                <div id="toc_container">
+                  <p id="toc_title_name" class="toc_title">Pro Spring 5 5th Edition</p>
+                  <p class="toc_title">TABLE OF CONTENTS</p>
+                  <ul class="toc_list">
+                    <li style="font-weight:700">Chapter 1: Introducing Spring
+                      <ul>
+                        <li style="font-weight:normal">What is Spring</li>
+                        <li style="font-weight:normal">The Spring Project</li>
+                        <li style="font-weight:normal">Alternatives to Spring</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 2: Getting Started
+                      <ul>
+                        <li style="font-weight:normal">Obtaining the Spring Framework</li>
+                        <li style="font-weight:normal">Understanding Spring Packaging</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 3: Introducing IoC and DI in Spring
+                      <ul>
+                        <li style="font-weight:normal">Inversion of Control and Dependency Injection</li>
+                        <li style="font-weight:normal">Types of Inversion of Control</li>
+                        <li style="font-weight:normal">Inversion of Control in Spring</li>
+                        <li style="font-weight:normal">Dependency Injection in Spring</li>
+                        <li style="font-weight:normal">Configuring ApplicationContext</li>
+                        <li style="font-weight:normal">Resolving Dependencies</li>
+                        <li style="font-weight:normal">Autowiring Your Bean</li>
+                        <li style="font-weight:normal">Setting Bean Inheritance</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 4: Spring Configuration in Detail and Spring Boot
+                      <ul>
+                        <li style="font-weight:normal">Spring's Impact on Application Portability</li>
+                        <li style="font-weight:normal">Bean Life-Cycle Management </li>
+                        <li style="font-weight:normal">Hooking into Bean Creation</li>
+                        <li style="font-weight:normal">Declaring an Initialization Method Using @Bean</li>
+                        <li style="font-weight:normal">Hooking into Bean Destruction</li>
+                        <li style="font-weight:normal">Executing a Method When a Bean Is Destroyed</li>
+                        <li style="font-weight:normal">Using the JSR-250 @PreDestroy Annotation</li>
+                        <li style="font-weight:normal">Declaring a Destroy Method Using @Bean</li>
+                        <li style="font-weight:normal">Understanding Order of Resolution</li>
+                        <li style="font-weight:normal">Making Your Beans “Spring Aware”</li>
+                        <li style="font-weight:normal">Use of FactoryBeans</li>
+                        <li style="font-weight:normal">Accessing a FactoryBean Directly</li>
+                        <li style="font-weight:normal">JavaBeans PropertyEditors</li>
+                        <li style="font-weight:normal">More Spring ApplicationContext Configuration</li>
+                        <li style="font-weight:normal">Accessing Resources</li>
+                        <li style="font-weight:normal">Configuration Using Java Classes</li>
+                        <li style="font-weight:normal">Profiles</li>
+                        <li style="font-weight:normal">Spring Profiles Using Java Configuration</li>
+                        <li style="font-weight:normal">Environment and PropertySource Abstraction</li>
+                        <li style="font-weight:normal">Configuration Using JSR-330 Annotations</li>
+                        <li style="font-weight:normal">Configuration Using Groovy </li>
+                        <li style="font-weight:normal">Spring Boot</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 5: Introducing Spring AOP
+                      <ul>
+                        <li style="font-weight:normal">AOP Concepts</li>
+                        <li style="font-weight:normal">Types of AOP</li>
+                        <li style="font-weight:normal">AOP in Spring</li>
+                        <li style="font-weight:normal">Spring AOP Architecture </li>
+                        <li style="font-weight:normal">Advisors and Pointcuts in Spring</li>
+                        <li style="font-weight:normal">Understanding Proxies </li>
+                        <li style="font-weight:normal">Advanced Use of Pointcuts </li>
+                        <li style="font-weight:normal">Getting Started with Introductions </li>
+                        <li style="font-weight:normal">Introduction Summary </li>
+                        <li style="font-weight:normal">Framework Services for AOP </li>
+                        <li style="font-weight:normal">Using @AspectJ-Style Annotations </li>
+                        <li style="font-weight:normal">AspectJ Integration </li>
+                        <li style="font-weight:normal">Summary </li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 6: Spring JDBC Support
+                      <ul>
+                        <li style="font-weight:normal">Introducing Lambda Expressions</li>
+                        <li style="font-weight:normal">Sample Data Model for Example Code</li>
+                        <li style="font-weight:normal">Exploring the JDBC Infrastructure</li>
+                        <li style="font-weight:normal">Spring JDBC Infrastructure</li>
+                        <li style="font-weight:normal">Database Connections and DataSources</li>
+                        <li style="font-weight:normal">Embedded Database Support</li>
+                        <li style="font-weight:normal">Using DataSources in DAO Classes</li>
+                        <li style="font-weight:normal">Exception Handling</li>
+                        <li style="font-weight:normal">The JdbcTemplate Class</li>
+                        <li style="font-weight:normal">Retrieving Nested Domain Objects with ResultSetExtractor</li>
+                        <li style="font-weight:normal">Spring Classes That Model JDBC Operations </li>
+                        <li style="font-weight:normal">Querying Data by Using MappingSqlQuery &lt;T&gt; </li>
+                        <li style="font-weight:normal">Batching Operations with BatchSqlUpdate</li>
+                        <li style="font-weight:normal">Calling Stored Functions by Using SqlFunction</li>
+                        <li style="font-weight:normal">Spring Data Project: JDBC Extensions</li>
+                        <li style="font-weight:normal">Considerations for Using JDBC</li>
+                        <li style="font-weight:normal">Spring Boot JDBC</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 7: Using Hibernate in Spring
+                      <ul>
+                        <li style="font-weight:normal">Sample Data Model for Example Code</li>
+                        <li style="font-weight:normal">Configuring Hibernate's SessionFactory</li>
+                        <li style="font-weight:normal">ORM Mapping Using Hibernate Annotations</li>
+                        <li style="font-weight:normal">The Hibernate Session Interface</li>
+                        <li style="font-weight:normal">Inserting Data</li>
+                        <li style="font-weight:normal">Updating Data</li>
+                        <li style="font-weight:normal">Deleting Data</li>
+                        <li style="font-weight:normal">Configuring Hibernate to Generate Tables from Entities</li>
+                        <li style="font-weight:normal">Annotating Methods or Fields?</li>
+                        <li style="font-weight:normal">Considerations When Using Hibernate</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 8: Data Access in Spring with JPA2
+                      <ul>
+                        <li style="font-weight:normal">Introducing JPA 2.1</li>
+                        <li style="font-weight:normal">Performing Database Operations with JPA</li>
+                        <li style="font-weight:normal">Querying for a Custom Result Type with a Constructor Expression</li>
+                        <li style="font-weight:normal">Using a Native Query</li>
+                        <li style="font-weight:normal">Using a Simple Native Query</li>
+                        <li style="font-weight:normal">Native Querying with SQL ResultSet Mapping</li>
+                        <li style="font-weight:normal">Introducing Spring Data JPA</li>
+                        <li style="font-weight:normal">Using JpaRepository</li>
+                        <li style="font-weight:normal">Spring Data JPA with Custom Queries</li>
+                        <li style="font-weight:normal">Keeping Entity Versions by Using Hibernate Envers</li>
+                        <li style="font-weight:normal">Spring Boot JPA</li>
+                        <li style="font-weight:normal">Considerations When Using JPA</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 9: Transaction Management
+                      <ul>
+                        <li style="font-weight:normal">Exploring the Spring Transaction Abstraction Layer</li>
+                        <li style="font-weight:normal">Implementations of the PlatformTransactionManager </li>
+                        <li style="font-weight:normal">Analyzing Transaction Properties</li>
+                        <li style="font-weight:normal">Sample Data Model and Infrastructure for Example Code</li>
+                        <li style="font-weight:normal">Using Programmatic Transactions</li>
+                        <li style="font-weight:normal">Global Transactions with Spring</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 10: Validation with Type Conversion and Formatting
+                      <ul>
+                        <li style="font-weight:normal">Dependencies</li>
+                        <li style="font-weight:normal">Spring Type Conversion System</li>
+                        <li style="font-weight:normal">Conversion from a String Using PropertyEditors</li>
+                        <li style="font-weight:normal">Introducing Spring Type Conversion</li>
+                        <li style="font-weight:normal">Field Formatting in Spring</li>
+                        <li style="font-weight:normal">Validation in Spring</li>
+                        <li style="font-weight:normal">Using AssertTrue for Custom Validation</li>
+                        <li style="font-weight:normal">Considerations for Custom Validation</li>
+                        <li style="font-weight:normal">Deciding Which Validation API to Use</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 11: Task Scheduling
+                      <ul>
+                        <li style="font-weight:normal">Dependencies for the Task Scheduling Samples</li>
+                        <li style="font-weight:normal">Task Scheduling in Spring</li>
+                        <li style="font-weight:normal">Task Execution in Spring</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 12: Using Spring Remoting
+                      <ul>
+                        <li style="font-weight:normal">Using a Data Model for Samples</li>
+                        <li style="font-weight:normal">Adding Required Dependencies for the JPA Back End</li>
+                        <li style="font-weight:normal">Implementing and Configuring SingerService</li>
+                        <li style="font-weight:normal">Using JMS in Spring</li>
+                        <li style="font-weight:normal">Spring Boot Artemis Starter</li>
+                        <li style="font-weight:normal">Using RESTful-WS in Spring</li>
+                        <li style="font-weight:normal">Configuring Castor XML</li>
+                        <li style="font-weight:normal">RESTful-WS with Spring with Spring Boot </li>
+                        <li style="font-weight:normal">Using AMQP in Spring</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 13: Spring Testing
+                      <ul>
+                        <li style="font-weight:normal">Introducing Testing Categories</li>
+                        <li style="font-weight:normal">Using Spring Test Annotations</li>
+                        <li style="font-weight:normal">Implementing Logic Unit Tests</li>
+                        <li style="font-weight:normal">Implementing an Integration Test</li>
+                        <li style="font-weight:normal">Implementing a Front-End Unit Test</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 14: Scripting Support in Spring
+                      <ul>
+                        <li style="font-weight:normal">Working with Scripting Support in Java</li>
+                        <li style="font-weight:normal">Introducing Groovy</li>
+                        <li style="font-weight:normal">Using Groovy with Spring</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 15: Application Monitoring
+                      <ul>
+                        <li style="font-weight:normal">JMX Support in Spring</li>
+                        <li style="font-weight:normal">Exporting a Spring Bean to JMX</li>
+                        <li style="font-weight:normal">Using Java VisualVM for JMX Monitoring</li>
+                        <li style="font-weight:normal">Monitoring Hibernate Statistics</li>
+                        <li style="font-weight:normal">JMX with Spring Boot</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 16: Web Applications
+                      <ul>
+                        <li style="font-weight:normal">Implementing the Service Layer for Samples</li>
+                        <li style="font-weight:normal">Configuring SingerService</li>
+                        <li style="font-weight:normal">Introducing MVC and Spring MVC</li>
+                        <li style="font-weight:normal">Understanding the Spring MVC Project Structure</li>
+                        <li style="font-weight:normal">Enabling Internationalization (i18n)</li>
+                        <li style="font-weight:normal">Using Theming and Templating</li>
+                        <li style="font-weight:normal">View Templating with Apache Tiles</li>
+                        <li style="font-weight:normal">Configuring Tiles in Spring MVC</li>
+                        <li style="font-weight:normal">Implementing the Views for Singer Information</li>
+                        <li style="font-weight:normal">Using jQuery and jQuery UI</li>
+                        <li style="font-weight:normal">Handling File Upload</li>
+                        <li style="font-weight:normal">Securing a Web Application with Spring Security</li>
+                        <li style="font-weight:normal">Creating Spring Web Applications with Spring Boot</li>
+                        <li style="font-weight:normal">Creating Thymeleaf Views</li>
+                        <li style="font-weight:normal">Using Thymeleaf Extensions</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 17: WebSocket
+                      <ul>
+                        <li style="font-weight:normal">Introducing WebSocket</li>
+                        <li style="font-weight:normal">Using WebSocket with Spring</li>
+                        <li style="font-weight:normal">Using the WebSocket API</li>
+                        <li style="font-weight:normal">Sending Messages with STOMP</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                    <li style="font-weight:700">Chapter 18: Spring Projects: Batch, Integration, XD, and More
+                      <ul>
+                        <li style="font-weight:normal">Spring Batch</li>
+                        <li style="font-weight:normal">JSR-352</li>
+                        <li style="font-weight:normal">Spring Boot Batch</li>
+                        <li style="font-weight:normal">Spring Integration</li>
+                        <li style="font-weight:normal">Spring XD</li>
+                        <li style="font-weight:normal">Spring Framework's Five Most Notable Features</li>
+                        <li style="font-weight:normal">Summary</li>
+                      </ul>
+                    </li>
+                  </ul>
+    
+                </div>
+  
+              </div>
+              <div class="u-horizontalDivider"></div>
               <div class="BookSliderNav has-next has-prev RecSection-desktop" id="recSection0">
                 <div class="RecSection-Header"><h2 class="RecSection-title">You Might Also Enjoy</h2></div>
                 <div>
@@ -1026,7 +1354,7 @@
         </div>
       </div>
     </div>
-  
+    
     <div class="FooterContainer">
       <div class="Footer-bg"></div>
       <div class="Footer Content">
@@ -1181,7 +1509,40 @@
   
   </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width:1200px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe id="frame" src="files/ProSpring5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                type="application/pdf"
+                style="width:1100px; height:80vh"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
 <script type="text/javascript">
+    
 
     function checkSubmit(e) {
         if (e && e.keyCode === 13) {
@@ -1197,6 +1558,14 @@
             window.location.href = "prospringsearch.html"
         }
     }
+
+    $('#collapseExample').on('show.bs.collapse', function () {
+        document.getElementById("overview").innerText = "Show Less";
+    })
+
+    $('#collapseExample').on('hide.bs.collapse', function () {
+        document.getElementById("overview").innerText = "Read Full Overview";
+    })
 </script>
 </body>
 </html>
