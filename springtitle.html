@@ -70,7 +70,7 @@
                      placeholder="Search 13 million titles by title, author, or ISBN"
                      aria-label="Search 13 million titles by title, author, or ISBN">
               <div class="Button-container Search-submit is-flat">
-                <button type="button" class="Button" onclick="checkSubmit(e);">
+                <button type="button" class="Button" onclick="checkSubmit();">
                   <svg class="Icon" aria-hidden="true">
                     <svg id="Icon--search" class="IconSymbol" viewBox="0 0 24 23.5">
                       <path
@@ -1602,7 +1602,9 @@
     }
 
     function checkSubmit(e) {
-        if(e && e.keyCode === 13) {
+        if (e === undefined){
+            getInputValue();
+        } else if (e && e.keyCode === 13) {
             getInputValue();
         }
     }
@@ -1675,7 +1677,6 @@
         let dimensions = document.getElementById("dimensions");
         let bookOverview = document.getElementById("bookOverview");
         let tocContainer = document.getElementById("toc_container");
-        console.log(tocContainer);
         switch (index) {
             case 1: // 5 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
