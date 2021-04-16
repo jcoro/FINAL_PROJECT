@@ -96,7 +96,7 @@
               <svg aria-hidden="true" class="Icon">
                 <use data-classes="" xlink:href="#Icon--cart"></use>
               </svg>
-              <div class="GlobalCart-count is-singleDigit">0</div>
+              <div id="cartCount" class="GlobalCart-count is-singleDigit"></div>
               <div class="tb-hiddenText">books in your cart</div>
             </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
               <svg aria-hidden="true" class="Icon">
@@ -944,6 +944,16 @@
 </div>
 <script type="text/javascript">
 
+    window.onload = function(){
+        let cartCount = document.getElementById("cartCount");
+        if (localStorage.getItem("cartCount") == null){
+            localStorage.setItem("cartCount", "0");
+            cartCount.innerText = localStorage.getItem("cartCount");
+        } else {
+            cartCount.innerText = localStorage.getItem("cartCount");
+        }
+    }
+
     function checkSubmit(e) {
         if(e && e.keyCode === 13) {
             getInputValue();
@@ -958,6 +968,7 @@
             window.location.href = "prospringsearch.html"
         }
     }
+    
 </script>
 </body>
 </html>

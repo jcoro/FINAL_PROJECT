@@ -114,7 +114,7 @@
                 <svg aria-hidden="true" class="Icon">
                   <use data-classes="" xlink:href="#Icon--cart"></use>
                 </svg>
-                <div class="GlobalCart-count is-singleDigit">0</div>
+                <div id="cartCount" class="GlobalCart-count is-singleDigit">0</div>
                 <div class="tb-hiddenText">books in your cart</div>
               </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
               <svg aria-hidden="true" class="Icon">
@@ -414,7 +414,7 @@
                       </label></div>
                       <div class="AddToCartButton">
                         <div class="AddToCartButton-Desktop Button-container is-small" title="">
-                          <button class="Button" type="button">Add to Cart</button>
+                          <button id="addToCartButton" class="Button" type="button" onclick="addToCart()">Add to Cart</button>
                         </div>
                       </div>
                       <div class="WorkTab-addToWishlist WorkSelector-addToWishlist">
@@ -446,11 +446,7 @@
               <div>
     
                 <p class="WorkMeta-overview">
-                  Master Spring basics and core topics, and share the authors' insights and real-world experiences
-                  with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework
-                  to build the various tiers and parts of an enterprise Java application: transactions, web and presentation
-                  tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and
-                  techniques covered in Pro Spring 5.
+                  Master Spring basics and core topics, and share the authors' insights and real-world experiences with remoting, Hibernate, and EJB. Beyond the basics, you'll learn how to leverage the Spring Framework to build the various tiers and parts of an enterprise Java application: transactions, web and presentation tiers, deployment, and much more. A full sample application allows you to apply many of the technologies and techniques covered in Pro Spring 5 and see how they work together. This book updates the perennial bestseller with the latest that the new Spring Framework 5 has to offer. Now in its fifth edition, this popular title is by far the most comprehensive and definitive treatment of Spring available.<br/><br/>It covers the new functional web framework and interoperability with Java 9. After reading this definitive book, you'll be armed with the power of Spring to build complex Spring applications, top to bottom. The agile, lightweight, open-source Spring Framework continues to be the de facto leading enterprise Java application development framework for today's Java programmers and developers. It works with other leading open-source, agile, and lightweight Java technologies such as Hibernate, Groovy, MyBatis, and more. Spring now works with Java EE and JPA 2 as well.<br/><br/><strong>What You'll Learn:</strong> <br/>&bull; Discover what's new in Spring Framework 5. <br/>&bull; Use the Spring Framework with Java 9<br/>&bull; Master data access and transactions<br/>&bull; Work with the new functional web framework<br/>&bull; Create microservices and other web services<br/><br/><strong>Who This Book Is For:</strong> <br/>Experienced Java and enterprise Java developers and programmers.<br/>Some experience with Spring highly recommended.
                 </p>
     
                 <div id="toc_container">
@@ -1542,10 +1538,19 @@
         crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-    
+
+    window.onload = function(){
+        let cartCount = document.getElementById("cartCount");
+        if (localStorage.getItem("cartCount") == null){
+            localStorage.setItem("cartCount", "0");
+            cartCount.innerText = localStorage.getItem("cartCount");
+        } else {
+            cartCount.innerText = localStorage.getItem("cartCount");
+        }
+    }
 
     function checkSubmit(e) {
-        if (e && e.keyCode === 13) {
+        if(e && e.keyCode === 13) {
             getInputValue();
         }
     }
@@ -1554,18 +1559,19 @@
         let inputVal = document.getElementById("search-input-id").value.toLowerCase();
         if (inputVal === "spring in action") {
             window.location.href = "springsearch.html"
-        } else if (inputVal === "pro spring 5") {
+        } else if (inputVal === "pro spring 5"){
             window.location.href = "prospringsearch.html"
         }
     }
 
-    $('#collapseExample').on('show.bs.collapse', function () {
-        document.getElementById("overview").innerText = "Show Less";
-    })
-
-    $('#collapseExample').on('hide.bs.collapse', function () {
-        document.getElementById("overview").innerText = "Read Full Overview";
-    })
+    function addToCart(){
+        let cartCount = document.getElementById("cartCount");
+        let count = (parseInt(cartCount.innerText))
+        count++;
+        cartCount.innerText = count.toString();
+        localStorage.setItem("cartCount", count.toString());
+    }
+    
 </script>
 </body>
 </html>

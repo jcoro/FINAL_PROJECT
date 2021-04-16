@@ -116,7 +116,7 @@
                 <svg aria-hidden="true" class="Icon">
                   <use data-classes="" xlink:href="#Icon--cart"></use>
                 </svg>
-                <div class="GlobalCart-count is-singleDigit">0</div>
+                <div id="cartCount" class="GlobalCart-count is-singleDigit">0</div>
                 <div class="tb-hiddenText">books in your cart</div>
               </a><a class="GlobalCart-button is-mobile Header-button Header-cart" href="">
               <svg aria-hidden="true" class="Icon">
@@ -441,7 +441,7 @@
                       </label></div>
                       <div class="AddToCartButton">
                         <div class="AddToCartButton-Desktop Button-container is-small" title="">
-                          <button class="Button" type="button">Add to Cart</button>
+                          <button id="addToCartButton" class="Button" type="button" onclick="addToCart()">Add to Cart</button>
                         </div>
                       </div>
                       <div class="WorkTab-addToWishlist WorkSelector-addToWishlist">
@@ -466,7 +466,7 @@
                   <h2 class="WorkMeta-overviewTitle">Book Overview</h2>
                   <div>
                     
-                    <p class="WorkMeta-overview">
+                    <p id="bookOverview" class="WorkMeta-overview">
                       Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling
                       Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on
                       reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best
@@ -478,9 +478,7 @@
                       with minimal configuration code. And the upgraded WebFlux framework supports reactive apps right
                       out of the box About the Book Spring in Action, 5th Edition guides you through Spring's core
                       features, explained in Craig Walls' famously clear style.
-                    </p>
-                    
-                    <p>
+                      <br/><br/>
                       You'll roll up your sleeves and build a secure
                       database-backed web app step by step. Along the way, you'll explore reactive programming,
                       microservices, service discovery, RESTful APIs, deployment, and expert best practices. Whether
@@ -536,7 +534,6 @@
                           </ul>
                         </li>
                       </ul>
-                    
                     </div>
                   
                   </div>
@@ -1594,6 +1591,39 @@
 
 <script type="text/javascript">
 
+    window.onload = function(){
+        let cartCount = document.getElementById("cartCount");
+        if (localStorage.getItem("cartCount") == null){
+            localStorage.setItem("cartCount", "0");
+            cartCount.innerText = localStorage.getItem("cartCount");
+        } else {
+            cartCount.innerText = localStorage.getItem("cartCount");
+        }
+    }
+
+    function checkSubmit(e) {
+        if(e && e.keyCode === 13) {
+            getInputValue();
+        }
+    }
+
+    function getInputValue() {
+        let inputVal = document.getElementById("search-input-id").value.toLowerCase();
+        if (inputVal === "spring in action") {
+            window.location.href = "springsearch.html"
+        } else if (inputVal === "pro spring 5"){
+            window.location.href = "prospringsearch.html"
+        }
+    }
+
+    function addToCart(){
+        let cartCount = document.getElementById("cartCount");
+        let count = (parseInt(cartCount.innerText))
+        count++;
+        cartCount.innerText = count.toString();
+        localStorage.setItem("cartCount", count.toString());
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         let elements = document.querySelectorAll(".WorkSelector-button");
         for (let i = 0; i < elements.length; i++) {
@@ -1640,10 +1670,12 @@
         let isbn = document.getElementById("isbn");
         let isbn13 = document.getElementById("isbn13");
         let frame = document.getElementById("frame");
-        let tocTitle = document.getElementById("toc_title_name");
         let length = document.getElementById("length");
         let weight = document.getElementById("weight");
         let dimensions = document.getElementById("dimensions");
+        let bookOverview = document.getElementById("bookOverview");
+        let tocContainer = document.getElementById("toc_container");
+        console.log(tocContainer);
         switch (index) {
             case 1: // 5 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
@@ -1656,10 +1688,11 @@
                 isbn.innerText = "1617294942";
                 isbn13.innerText = "9781617294945";
                 frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 5th Edition";
                 length.innerText = "520 Pages";
                 weight.innerText = "2.26 lbs.";
                 dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML = "<p id=\"bookOverview\" class=\"WorkMeta-overview\">Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Spring Framework makes life easier for Java developers. New features in Spring 5 bring its productivity-focused approach to microservices, reactive development, and other modern application designs. With Spring Boot now fully integrated, you can start even complex projects with minimal configuration code. And the upgraded WebFlux framework supports reactive apps right out of the box About the Book Spring in Action, 5th Edition guides you through Spring's core features, explained in Craig Walls' famously clear style.<br/><br/>You'll roll up your sleeves and build a secure database-backed web app step by step. Along the way, you'll explore reactive programming, microservices, service discovery, RESTful APIs, deployment, and expert best practices. Whether you're just discovering Spring or leveling up to Spring 5.0, this Manning classic is your ticket What's inside Building reactive applications Spring MVC for web apps and RESTful web services Securing applications with Spring Security Covers Spring 5.0 Over 100,000 copies sold About the Reader For intermediate Java developers. About the Author Craig Walls is a principal software engineer at Pivotal, a popular author, an enthusiastic supporter of Spring Framework, and a frequent conference speaker.</p>";
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 5th Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - FOUNDATIONAL SPRING<ul><li style=\"font-weight:normal\">1. Getting started with Spring</li><li style=\"font-weight:normal\">2. Developing web applications</li><li style=\"font-weight:normal\">3. Working with data</li><li style=\"font-weight:normal\">4. Securing Spring</li><li style=\"font-weight:normal\">5. Working with configuration properties</li></ul></li><li style=\"font-weight:700\">PART 2 - INTEGRATED SPRING<ul><li style=\"font-weight:normal\">6. Creating REST services</li><li style=\"font-weight:normal\">7. Consuming REST services</li><li style=\"font-weight:normal\">8. Sending messages asynchronously</li><li style=\"font-weight:normal\">9. Integrating Spring</li></ul></li><li style=\"font-weight:700\">PART 3 - REACTIVE SPRING<ul><li style=\"font-weight:normal\">10. Introducing Reactor</li><li style=\"font-weight:normal\">11. Developing reactive APIs</li><li style=\"font-weight:normal\">12. Persisting data reactively</li></ul></li><li style=\"font-weight:700\">PART 4 CLOUD-NATIVE SPRING<ul><li style=\"font-weight:normal\">13. Discovering services</li><li style=\"font-weight:normal\">14. Managing configuration</li><li style=\"font-weight:normal\">15. Handling failure and latency</li></ul></li><li style=\"font-weight:700\">PART 5 - DEPLOYED SPRING<ul><li style=\"font-weight:normal\">16. Working with Spring Boot Actuator</li><li style=\"font-weight:normal\">17. Administering Spring</li><li style=\"font-weight:normal\">18. Monitoring Spring with JMX</li><li style=\"font-weight:normal\">19. Deploying Spring</li></ul></li></ul></div>";
                 break;
             case 2: // 4 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/3919fde90857cd5a1deb16ac48ea2a04eb898ca5.jpg";
@@ -1672,10 +1705,11 @@
                 isbn.innerText = "161729120X";
                 isbn13.innerText = "9781617291203";
                 frame.src = "files/SpringInAction4TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 4th Edition";
                 length.innerText = "624 Pages";
                 weight.innerText = "2.35 lbs.";
                 dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML = "<p id=\"bookOverview\" class=\"WorkMeta-overview\">Summary Spring in Action, Fourth Edition is a hands-on guide to the Spring Framework, updated for version 4. It covers the latest features, tools, and practices including Spring MVC, REST, Security, Web Flow, and more. You'll move between short snippets and an ongoing example as you learn to build simple and efficient J2EE applications. Author Craig Walls has a special knack for crisp and entertaining examples that zoom in on the features and techniques you really need. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Designed in 2003 as a lighter approach to J2EE development, Spring Framework has since become a standard choice for building enterprise applications and required knowledge for Java developers. Spring 4, the latest major version, provides full Java 8 integration along with key upgrades like new annotations for the IoC container, improvements to Spring Expression Language, and much-needed support for REST. Whether you're just discovering Spring or you want to absorb the new features, there's no better way to master Spring than with this book. About the Book Spring in Action, Fourth Edition is a hands-on guide to the Spring Framework.<br/><br/>It covers Spring core, along with the latest updates to Spring MVC, Security, Web Flow, and more. You'll move between short snippets and an ongoing example as you learn to build simple and efficient JEE applications. Author Craig Walls has a special knack for crisp and entertaining examples that zoom in on the features and techniques you really need. Nearly 100,000 developers have used this book to learn Spring It requires a working knowledge of Java. What's Inside Updated for Spring 4 Spring Data for NoSQL Simplifying configuration with annotations and definition profiles Working with RESTful resources About the Author Craig Walls is a software developer at Pivotal. He's a popular author and a frequent speaker at user groups and conferences. Craig lives in Cross Roads, Texas. Table of Contents PART 1 CORE SPRING Springing into action Wiring beans Advanced wiring Aspect-oriented SpringPART 2 SPRING ON THE WEB Building Spring web applications Rendering web views Advanced Spring MVC Working with Spring Web Flow Securing web applicationsPART 3 SPRING IN THE BACKEND Hitting the database with Spring and JDBC Persisting data with object-relational mapping Working with NoSQL databases Caching data Securing methods PART 4 INTEGRATING SPRING Working with remote services Creating REST APIs with Spring MVC Messaging in Spring Messaging with WebSocket and STOMP Sending email with Spring Managing Spring beans with JMX Simplifying Spring development with Spring Boot</p>"
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 4th Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - CORE SPRING<ul><li style=\"font-weight:normal\">1. Springing into action</li><li style=\"font-weight:normal\">2. Wiring beans</li><li style=\"font-weight:normal\">3. Advanced wiring</li><li style=\"font-weight:normal\">4. Aspect-oriented Spring</li></ul></li><li style=\"font-weight:700\">PART 2 - SPRING ON THE WEB<ul><li style=\"font-weight:normal\">5. Building Spring web applications</li><li style=\"font-weight:normal\">6. Rendering web views</li><li style=\"font-weight:normal\">7. Advanced Spring MVC</li><li style=\"font-weight:normal\">8. Working with Spring Web Flow</li><li style=\"font-weight:normal\">9. Securing web applications</li></ul></li><li style=\"font-weight:700\">PART 3 - SPRING IN THE BACK END<ul><li style=\"font-weight:normal\">10. Hitting the database with Spring and JDBC</li><li style=\"font-weight:normal\">11. Persisting data with object-relational mapping</li><li style=\"font-weight:normal\">12. Working with NoSQL databases</li><li style=\"font-weight:normal\">13. Caching data</li><li style=\"font-weight:normal\">14. Securing methods</li></ul></li><li style=\"font-weight:700\">PART 4 INTEGRATING SPRING<ul><li style=\"font-weight:normal\">15. Working with remote services</li><li style=\"font-weight:normal\">16. Creating REST APIs with Spring MVC</li><li style=\"font-weight:normal\">17. Messaging in Spring</li><li style=\"font-weight:normal\">18. Messaging with WebSocket and STOMP</li><li style=\"font-weight:normal\">19. Sending email with Spring</li><li style=\"font-weight:normal\">20. Managing Spring beans with JMX</li><li style=\"font-weight:normal\">21. Simplifying Spring development with Spring Boot</li></ul></li></ul></div>";
                 break;
             case 3: // 3 ed
                 imageElement.src = "images/SpringInAction3Cover.jpg";
@@ -1688,10 +1722,11 @@
                 isbn.innerText = "1935182358";
                 isbn13.innerText = "9781935182351";
                 frame.src = "files/SpringInAction3TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 3rd Edition";
                 length.innerText = "424 Pages";
                 weight.innerText = "1.60 lbs.";
                 dimensions.innerText = "0.8\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML = "<p id=\"bookOverview\" class=\"WorkMeta-overview\">Summary Totally revised for Spring 3.0, this book is a hands-on guide to the Spring Framework. It covers the latest features, tools, and practices including Spring MVC, REST, Security, Web Flow, and more. Following short code snippets and an ongoing example developed throughout the book, you'll learn how to build simple and efficient J2EE applications. About the Technology Spring Framework is required knowledge for Java developers, and Spring 3.0 introduces powerful new features like SpEL, the Spring Expression Language, new annotations for the IoC container, and much-needed support for REST. Whether you're just discovering Spring or you want to absorb the new 3.0 features, there's no better way to master Springthan this book.<br/><br/>About the Book Spring in Action, Third Edition continues the practical, hands-on style of the previous bestselling editions. Author Craig Walls has a special knack for crisp and entertaining examples that zoom in on the features and techniques you really need. This edition highlights the most important aspects of Spring 3.0 including REST, remote services, messaging, Security, MVC, Web Flow, and more. Purchase of the print book comes with an offer of a free PDF, ePub, and Kindle eBook from Manning. Also available is all code from the book. What's Inside Using annotations to reduce configuration Working with RESTful resources Spring Expression Language (SpEL) Security, Web Flow, and more Who Should Read This Book Nearly 100,000 developers have used this book to learn Spring Table of Contents PART 1 CORE SPRING Springing into action Wiring beans Minimizing XML configuration in Spring Aspect-oriented Spring PART 2 SPRING APPLICATION ESSENTIALS Hitting the database Managing transactions Building web applications with Spring MVC Working with Spring Web Flow Securing Spring PART 3 INTEGRATING SPRING Working with remote services Giving Spring some REST Messaging in Spring Managing Spring beans with JMX Odds and ends</p>"
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 3rd Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - CORE SPRING<ul><li style=\"font-weight:normal\">1. Springing into action</li><li style=\"font-weight:normal\">2. Wiring beans</li><li style=\"font-weight:normal\">3. Minimizing XML configuration in Spring</li><li style=\"font-weight:normal\">4. Aspect-oriented Spring</li></ul></li><li style=\"font-weight:700\">PART 2 - SPRING APPLICATION ESSENTIALS<ul><li style=\"font-weight:normal\">5. Hitting the database</li><li style=\"font-weight:normal\">6. Managing transactions</li><li style=\"font-weight:normal\">7. Building web applications with Spring MVC</li><li style=\"font-weight:normal\">8. Working with Spring Web Flow</li><li style=\"font-weight:normal\">9. Securing Spring</li></ul></li><li style=\"font-weight:700\">PART 3 - INTEGRATING SPRING<ul><li style=\"font-weight:normal\">10. Working with remote services</li><li style=\"font-weight:normal\">11. Giving Spring some REST</li><li style=\"font-weight:normal\">12. Messaging in Spring</li><li style=\"font-weight:normal\">13. Managing Spring beans with JMX</li><li style=\"font-weight:normal\">14. Odds and ends</li></ul></li></ul></div>";
                 break;
             case 4: // 2 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/fbcc24d3d833762461246bd217194c1df9246087.jpg";
@@ -1704,10 +1739,11 @@
                 isbn.innerText = "1933988134";
                 isbn13.innerText = "9781933988139";
                 frame.src = "files/SpringInAction2TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 2nd Edition";
                 length.innerText = "650 Pages";
                 weight.innerText = "2.85 lbs.";
                 dimensions.innerText = "1.5\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML = "<p id=\"bookOverview\" class=\"WorkMeta-overview\">Spring in Action  2E is an expanded, completely updated second edition of the best selling  Spring in Action.  Written by Craig Walls, one of Manning's best writers, this book covers the exciting new features of Spring 2.0, which was released in October 2006. Spring is a lightweight container framework that represents an exciting way to build enterprise components with simple Java objects. By employing dependency injection and AOP, Spring encourages loosely coupled code and enables plain-old Java objects with capabilities that were previously reserved for EJBs.<br/><br/>This book is a hands-on, example-driven exploration of the Spring Framework. Combining short code snippets and an ongoing example developed throughout the book, it shows readers how to build simple and efficient J2EE applications, how to solve persistence problems, handle asynchronous messaging, create and consume remote services, build web applications, and integrate with most popular web frameworks. Readers will learn how to use Spring to write simpler, easier to maintain code so they can focus on what really matters-- critical business needs.  Spring in Action,  2E is for Java developers who are looking for ways to build enterprise-grade applications based on simple Java objects, without resorting to more complex and invasive EJBs. Even hard-core EJB users will find this book valuable as  Spring in Action,  2E will describe ways to use EJB components alongside Spring. Software architects will also find  Spring in Action,  2E useful as they assess and apply lightweight techniques prescribed by Spring. and learn how Spring can be applied at the various layers of enterprise applications.</p>"
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 2nd Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - CORE SPRING<ul><li style=\"font-weight:normal\">1. Springing into action</li><li style=\"font-weight:normal\">2. Basic bean wiring</li><li style=\"font-weight:normal\">3. Advanced bean wiring</li><li style=\"font-weight:normal\">4. Advising beans</li></ul></li><li style=\"font-weight:700\">PART 2 - ENTERPRISE SPRING<ul><li style=\"font-weight:normal\">5. Hitting the database</li><li style=\"font-weight:normal\">6. Managing transactions</li><li style=\"font-weight:normal\">7. Securing Spring</li><li style=\"font-weight:normal\">8. Spring and POJO-based remote services</li><li style=\"font-weight:normal\">9. Building contract-first web services in Spring</li><li style=\"font-weight:normal\">10. Spring messaging</li><li style=\"font-weight:normal\">11. Spring and Enterprise JavaBeans</li><li style=\"font-weight:normal\">12. Accessing enterprise services</li></ul></li><li style=\"font-weight:700\">PART 3 - CLIENT-SIDE SPRING<ul><li style=\"font-weight:normal\">13. Handling web requests</li><li style=\"font-weight:normal\">14. Rendering web views</li><li style=\"font-weight:normal\">15. Using Spring Web Flow</li><li style=\"font-weight:normal\">16. Integrating with other web frameworks</li></ul></li></ul></div>";
                 break;
             case 5: // 1 ed
                 imageElement.src = "https://img.thriftbooks.com/api/images/l/15663828e4d32892b4187fb39671d18030123a2c.jpg";
@@ -1720,10 +1756,12 @@
                 isbn.innerText = "1932394354";
                 isbn13.innerText = "9781932394351";
                 frame.src = "files/SpringInAction1TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 1st Edition";
                 length.innerText = "444 Pages";
                 weight.innerText = "1.82 lbs.";
                 dimensions.innerText = "0.9\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML =
+                    "<p id=\"bookOverview\" class=\"WorkMeta-overview\">Written for enterprise Java developers who have become disillusioned with the complexity and bulk involved with EJB development, this programming tool demonstrates how the Spring framework can make coupled code easy to manage, understand, reuse, and unit-test. Spring's employment of inversion control and aspect-oriented programming techniques to encourage loosely coupled code is explained, providing programmers with the ability to use JavaBeans with the power and enterprise services only previously available in the heavier Enterprise JavaBeans.</p>"
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 1st Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - SPRING ESSENTIALS <ul><li style=\"font-weight:normal\">1. A Spring jump start</li><li style=\"font-weight:normal\">2. Wiring beans</li><li style=\"font-weight:normal\">3. Creating aspects</li></ul></li><li style=\"font-weight:700\">PART 2 - SPRING IN THE BUSINESS LAYER<ul><li style=\"font-weight:normal\">4. Hitting the database</li><li style=\"font-weight:normal\">5. Managing transactions</li><li style=\"font-weight:normal\">6. Remoting</li><li style=\"font-weight:normal\">7. Accessing enterprise services</li></ul></li><li style=\"font-weight:700\">PART 3 - SPRING IN THE WEB LAYER<ul><li style=\"font-weight:normal\">8. Building the web layer</li><li style=\"font-weight:normal\">9. View layer alternatives</li><li style=\"font-weight:normal\">10. Working with other web frameworks</li><li style=\"font-weight:normal\">11. Securing Spring applications</li></ul></li></ul></div>";
                 break;
             default:
                 imageElement.src = "https://img.thriftbooks.com/api/images/i/m/769D29115077B4DC186B7F6AB1A6A237CD91ECF9.jpg";
@@ -1736,35 +1774,16 @@
                 isbn.innerText = "1617294942";
                 isbn13.innerText = "9781617294945";
                 frame.src = "files/SpringInAction5TOC.pdf#toolbar=0&navpanes=0&scrollbar=0";
-                tocTitle.innerText = "Spring in Action 5th Edition";
                 length.innerText = "520 Pages";
                 weight.innerText = "2.26 lbs.";
                 dimensions.innerText = "1.1\" x 7.4\" x 9.3\"";
+                bookOverview.outerHTML =
+                    "<p id=\"bookOverview\" className=\"WorkMeta-overview\">Spring in Action, 5th Edition is the fully updated revision of Manning's bestselling Spring in Action. This new edition includes all Spring 5.0 updates, along with new examples on reactive programming, Spring WebFlux, and microservices. You'll also find the latest Spring best practices, including Spring Boot for application setup and configuration. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications. About the Technology Spring Framework makes life easier for Java developers. New features in Spring 5 bring its productivity-focused approach to microservices, reactive development, and other modern application designs. With Spring Boot now fully integrated, you can start even complex projects with minimal configuration code. And the upgraded WebFlux framework supports reactive apps right out of the box About the Book Spring in Action, 5th Edition guides you through Spring's core features, explained in Craig Walls' famously clear style.<br/><br/>You'll roll up your sleeves and build a secure database-backed web app step by step. Along the way, you'll explore reactive programming, microservices, service discovery, RESTful APIs, deployment, and expert best practices. Whether you're just discovering Spring or leveling up to Spring 5.0, this Manning classic is your ticket What's inside Building reactive applications Spring MVC for web apps and RESTful web services Securing applications with Spring Security Covers Spring 5.0 Over 100,000 copies sold About the Reader For intermediate Java developers. About the Author Craig Walls is a principal software engineer at Pivotal, a popular author, an enthusiastic supporter of Spring Framework, and a frequent conference speaker.</p>"
+                tocContainer.outerHTML = "<div id=\"toc_container\"><p id=\"toc_title_name\" class=\"toc_title\">Spring in Action 5th Edition</p><p class=\"toc_title\">TABLE OF CONTENTS</p><ul class=\"toc_list\"><li style=\"font-weight:700\">PART 1 - FOUNDATIONAL SPRING<ul><li style=\"font-weight:normal\">1. Getting started with Spring</li><li style=\"font-weight:normal\">2. Developing web applications</li><li style=\"font-weight:normal\">3. Working with data</li><li style=\"font-weight:normal\">4. Securing Spring</li><li style=\"font-weight:normal\">5. Working with configuration properties</li></ul></li><li style=\"font-weight:700\">PART 2 - INTEGRATED SPRING<ul><li style=\"font-weight:normal\">6. Creating REST services</li><li style=\"font-weight:normal\">7. Consuming REST services</li><li style=\"font-weight:normal\">8. Sending messages asynchronously</li><li style=\"font-weight:normal\">9. Integrating Spring</li></ul></li><li style=\"font-weight:700\">PART 3 - REACTIVE SPRING<ul><li style=\"font-weight:normal\">10. Introducing Reactor</li><li style=\"font-weight:normal\">11. Developing reactive APIs</li><li style=\"font-weight:normal\">12. Persisting data reactively</li></ul></li><li style=\"font-weight:700\">PART 4 CLOUD-NATIVE SPRING<ul><li style=\"font-weight:normal\">13. Discovering services</li><li style=\"font-weight:normal\">14. Managing configuration</li><li style=\"font-weight:normal\">15. Handling failure and latency</li></ul></li><li style=\"font-weight:700\">PART 5 - DEPLOYED SPRING<ul><li style=\"font-weight:normal\">16. Working with Spring Boot Actuator</li><li style=\"font-weight:normal\">17. Administering Spring</li><li style=\"font-weight:normal\">18. Monitoring Spring with JMX</li><li style=\"font-weight:normal\">19. Deploying Spring</li></ul></li></ul></div>";
+                break;
         }
     }
-
-    function checkSubmit(e) {
-        if (e && e.keyCode === 13) {
-            getInputValue();
-        }
-    }
-
-    function getInputValue() {
-        let inputVal = document.getElementById("search-input-id").value.toLowerCase();
-        if (inputVal === "spring in action") {
-            window.location.href = "springsearch.html"
-        } else if (inputVal === "pro spring 5") {
-            window.location.href = "prospringsearch.html"
-        }
-    }
-
-    $('#collapseExample').on('show.bs.collapse', function () {
-        document.getElementById("overview").innerText = "Show Less";
-    })
-
-    $('#collapseExample').on('hide.bs.collapse', function () {
-        document.getElementById("overview").innerText = "Read Full Overview";
-    })
+    
 </script>
 </body>
 </html>
